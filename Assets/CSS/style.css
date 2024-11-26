@@ -240,6 +240,7 @@ header {
     display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
     width: auto; /* Ajustar automáticamente el ancho según el contenido */
     padding: 10px 20px; /* Espaciado interno reducido */
+    border: 3px solid #797777;  /* Borde */
     background-color: #ebbe00; /* Color de fondo */
     color: #0e0a0a; /* Color del texto */
     text-align: center;
