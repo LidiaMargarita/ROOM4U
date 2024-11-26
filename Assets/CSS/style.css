@@ -174,7 +174,7 @@ header {
     width: 80px;
     text-align: center;
     font-size: 14px;
-    border: 1px solid #b6b5b5;
+    border: 1px solid #8b8787;
     border-radius: 5px;
     padding: 5px;
     outline: none;
@@ -196,7 +196,7 @@ header {
     background-color: #fff;  /* Fondo de los botones */
     color: #130b0b;  /* Color del texto */
     padding: 10px; /* Espacio interno*/
-    border: 3px solid #979090;  /* Borde del botón*/
+    border: 3px solid #797777;  /* Borde del botón*/
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
