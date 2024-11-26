@@ -81,7 +81,7 @@ header {
     top: 206px;  /*POSICIÓN DE LA VENTANA PARA PEGARLA A LA BARRA*/
     left: 50%;
     transform: translateX(-50%);  /*CENTRADO HORIZONTAL*/
-    background-color: #eed5c8; /* Fondo beige */
+    background-color: #efefef; /* Fondo gris claro*/
     border-radius: 20px;
     padding: 20px;
     width: 700px;
@@ -175,7 +175,7 @@ header {
     width: 80px;
     text-align: center;
     font-size: 14px;
-    border: 1px solid #8b8787;
+    border: 2px solid #a6a6a6;
     border-radius: 5px;
     padding: 5px;
     outline: none;
@@ -197,7 +197,7 @@ header {
     background-color: #fff;  /* Fondo de los botones */
     color: #130b0b;  /* Color del texto */
     padding: 10px; /* Espacio interno*/
-    border: 3px solid #797777;  /* Borde del botón*/
+    border: 3px solid #a6a6a6;  /* Borde del botón*/
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -227,7 +227,7 @@ header {
     background-color: #fff;  /* Fondo */
     color: #130b0b;  /* Color del texto */
     padding: 10px;    /* Ajustamos el espacio interno */
-    border: 3px solid #797777;  /* Borde */
+    border: 3px solid #a6a6a6;  /* Borde */
     border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -240,7 +240,6 @@ header {
     display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
     width: auto; /* Ajustar automáticamente el ancho según el contenido */
     padding: 10px 20px; /* Espaciado interno reducido */
-    border: 3px solid #797777;  /* Borde */
     background-color: #ebbe00; /* Color de fondo */
     color: #0e0a0a; /* Color del texto */
     text-align: center;
