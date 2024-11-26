@@ -63,11 +63,15 @@
                 <label>¿Cuál es tu presupuesto?</label>
                 <div class="rango-contenedor">
         <!--RCONTENEDOR DE LA BARRA DESLIZANTE Y LOS VALORES-->
-        <div class="rango-contenedor">
-            <input type="range" id="rangoBarra" min="0" max="100000" step="500" value="0,50000" multiple>
-            <div class="valores-rango">
-                <input type="number" id="minValor" value="0" min="0" max="100000" step="500">
-                <input type="number" id="maxValor" value="50000" min="0" max="100000" step="500">
+                <!-- Barra deslizante -->
+                <input type="range" id="rangoMin" min="0" max="100000" step="500" value="0">
+                <input type="range" id="rangoMax" min="0" max="100000" step="500" value="50000">
+                <!-- Valores del rango -->
+                <div class="valores-rango">
+                    <input type="number" id="minValor" value="0" min="0" max="100000" step="500" placeholder="Precio mínimo">
+                    <span>-</span>
+                    <input type="number" id="maxValor" value="50000" min="0" max="100000" step="500" placeholder="Precio máximo">
+                </div>
             </div>
         </div>
         <!-- Tercera pregunta del formulario -->

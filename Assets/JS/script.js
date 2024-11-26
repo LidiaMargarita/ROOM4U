@@ -1,8 +1,11 @@
-// Seleccionamos elementos importantes de la página
-const barraBusqueda = document.getElementById("barraBusqueda"); // Barra de búsqueda
-const ventanaFlotante = document.getElementById("ventanaFlotante"); // Ventana flotante
-const botonesOpciones = document.querySelectorAll(".opciones button"); // Botones de opciones (Casa, Cuarto, Departamento)
-const botonesDelegaciones = document.querySelectorAll(".delegaciones button"); // Botones de delegaciones
+// Este código busca el cuadro donde haces clic para abrir la ventana de buscar inmueble.
+const barraBusqueda = document.getElementById("barraBusqueda");
+// Este busca la ventana que aparece cuando haces clic en la barra de búsqueda.
+const ventanaFlotante = document.getElementById("ventanaFlotante");
+// Aquí seleccionamos todos los botones donde escoges "Casa", "Cuarto" o "Departamento".
+const botonesOpciones = document.querySelectorAll(".opciones button");
+// Aquí seleccionamos todos los botones donde eliges las delegaciones (como "Xochimilco" o "Tláhuac").
+const botonesDelegaciones = document.querySelectorAll(".delegaciones button");
 
 // Elementos relacionados con el rango y valores
 const rangoMin = document.getElementById("rangoMin"); // Control deslizante mínimo
@@ -39,8 +42,8 @@ botonesDelegaciones.forEach((button) => {
 const actualizarFondoBarra = () => {
     const min = parseInt(rangoMin.value); // Valor actual del control deslizante mínimo
     const max = parseInt(rangoMax.value); // Valor actual del control deslizante máximo
-    const porcentajeMin = (min / 50000) * 100; // Calcula porcentaje del rango mínimo
-    const porcentajeMax = (max / 50000) * 100; // Calcula porcentaje del rango máximo
+    const porcentajeMin = (min / 100000) * 100; // Calcula porcentaje del rango mínimo
+    const porcentajeMax = (max / 100000) * 100; // Calcula porcentaje del rango máximo
 
     // Cambiar el fondo para mostrar los rangos seleccionados
     rangoMin.style.background = 'linear-gradient(to right, #ddd ${porcentajeMin}%, #FFD700 ${porcentajeMin}%, #FFD700 ${porcentajeMax}%, #ddd ${porcentajeMax}%)';

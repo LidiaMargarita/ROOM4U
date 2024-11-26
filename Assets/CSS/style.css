@@ -113,7 +113,7 @@ header {
     display:block;
 }
 
-/* Rango de la barra deslizante */
+/* ESTILO DEL Rango de la barra deslizante */
 /* Rango de la barra deslizante */
 .rango-contenedor {
     display: flex;
@@ -122,16 +122,23 @@ header {
     gap: 10px;
 }
 
-#rangoBarra {
-    width: 80%;
+/*ESTILO DE LAS BARRAS*/
+/* Estilo de las barras deslizantes */
+#rangoMin,
+#rangoMax {
+    width: 90%; /* Ajusta el ancho de las barras */
     height: 8px;
+    background: #be4d4d;
     border-radius: 5px;
-    background: #62bb2f;
     outline: none;
     appearance: none;
+    cursor: pointer;
+    margin: 0;
 }
 
-#rangoBarra::-webkit-slider-thumb {
+/* Estilo del deslizador de la barra */
+#rangoMin::-webkit-slider-thumb,
+#rangoMax::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
@@ -140,23 +147,20 @@ header {
     cursor: pointer;
 }
 
-#rangoBarra::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    background: #FFD700;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
+/* Estilo de los campos de valores */
 .valores-rango {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .valores-rango input {
-    width: 70px;
+    width: 80px;
+    padding: 5px;
     text-align: center;
+    border: 1px solid #685b5b;
+    border-radius: 5px;
     font-size: 14px;
 }
 
