@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de mi inmueble</title>
+    <link rel="stylesheet" href="../gestion-inmuebles/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <a href="../index.html">
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../mis-inmuebles/index.html">Mis inmuebles</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <h1>Gestión de mi inmueble</h1>
+
+        <!-- Fotos del inmueble -->
+        <div class="photos">
+            <div class="photo">FOTO</div>
+            <div class="photo">FOTO</div>
+            <div class="photo">FOTO</div>
+            <div class="photo">FOTO</div>
+        </div>
+
+        <!-- Detalles del inmueble -->
+        <div class="details">
+            <button class="edit-button" id="editInmueble">Editar inmueble</button>
+            <p><strong>Ubicación:</strong> <span id="ubicacion">[Ubicación del inmueble]</span></p>
+            <p><strong>Descripción:</strong> <span id="descripcion">[Descripción del inmueble]</span></p>
+            <p><strong>Renta:</strong> <span id="renta">[Precio del inmueble]</span></p>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="buttons">
+            <button class="assign-client">Asignar Cliente</button>
+            <button class="status available">Disponible</button>
+            <button class="delete">Eliminar</button>
+        </div>
+
+        <button class="save">Guardar datos</button>
+    </main>
+
+    <!-- Vincular scripts -->
+    <script src="../gestion-inmuebles/script.js" defer></script>
+    <script src="../Assets/JS/menu/menu.js" defer></script>
+</body>
+</html>

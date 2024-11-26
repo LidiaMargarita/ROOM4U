@@ -1,0 +1,90 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px; /* Tamaño más grande para destacar */
+    margin-bottom: 40px; /* Mayor separación del contenido */
+    font-weight: bold;
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Botones uno encima del otro */
+    gap: 20px; /* Espacio entre los botones */
+    align-items: center;
+}
+
+/* Botón Estudiante y Propietario */
+button {
+    background-color: #59e259; /* Verde brillante */
+    color: rgb(17, 15, 15);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px; /* Ancho fijo para uniformidad */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+button:hover {
+    background-color: #59e259; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Ajustes para el texto dentro de los botones */
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 2px #28A428; /* Enfoque al presionar */
+}

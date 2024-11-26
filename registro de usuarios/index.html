@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="../registro de usuarios/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <!-- Logo redirige a la página principal -->
+        <a href="../index.html">
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <!-- Menú hamburguesa -->
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Menú desplegable -->
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-container">
+        <!-- Título principal -->
+        <h1>Registro de Usuario</h1>
+        <div class="button-container">
+            <!-- Botón Estudiante -->
+            <button class="button-estudiante" onclick="window.location.href='../registro de usuarios/Estudiante/index.html'">Estudiante</button>
+            <!-- Botón Propietario -->
+            <button class="button-propietario" onclick="window.location.href='../registro de usuarios/Propietario/index.html'">Propietario</button>
+        </div>
+    </main>
+
+    
+    <!-- Vincular JS del menú -->
+    <script src="../Assets/JS/menu/menu.js" defer></script>
+    
+    <!-- Vincular JS de registro de usuarios-->
+    <script src="../registro de usuarios/script.js" defer></script>
+</body>
+</html>

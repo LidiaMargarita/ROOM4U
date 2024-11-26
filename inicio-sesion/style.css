@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px; /* Ajustar la altura */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    align-items: stretch; /* Ambos elementos tendrán la misma altura */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 0; /* Sin espacio entre elementos */
+    margin-top: 30px; /* Espacio de 2 cm desde la cabecera */
+}
+
+/* Imagen decorativa */
+.login-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0; /* Elimina márgenes */
+    padding: 0;
+    display: block; /* Asegura que sea un bloque */
+}
+
+/* Contenedor del formulario */
+.login-form-container {
+    background-color: #c5bdbd; /* Fondo más limpio y claro */
+    padding: 30px;
+    border: 1px solid #c5bdbd;
+    border-radius: 10px;
+    width: 350px; /* Igual ancho que la imagen */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+}
+
+/* Títulos del formulario */
+.form-header h2 {
+    font-size: 28px; /* Ajusta el tamaño del título */
+    color: #333;
+    text-align: center;
+}
+
+.form-header p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Espacio para el ícono del ojo */
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    color: #333;
+}
+
+/* Ojo para mostrar contraseña */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajustado al borde derecho */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px; /* Tamaño del ojo */
+}
+
+/* Botón de iniciar sesión */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #6d6dff;
+    color: #fff;
+    font-size: 18px; /* Tamaño más grande */
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px; /* Espaciado del resto del formulario */
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #5a5aff; /* Color más oscuro al pasar el mouse */
+}
+
+/* Enlaces */
+.links {
+    text-align: left; /* Ajuste alineado a la izquierda */
+    font-size: 14px;
+    color: #000;
+}
+
+.links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

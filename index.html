@@ -1,0 +1,105 @@
+<!----------------------------------PÁGINA PRINCIPAL------------------------------------------->
+<!--LIBRERÍAS-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--AQUÍ EMPIEZA LO PRIMERO QUE VAMOS A HACER QUE EN ESTE CASO ES LA PÁGINA PRINCIPAL-->
+<!--REQUISITO 9 "FILTRADO DE BÚSQUEDA"-->
+    <title>Room4U - Filtrado de Búsqueda</title>
+    <!-- Fuente personalizada para la letra bonita -->
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <!-- Vincular CSS para que se conecte con las páginas de estilo y diseño  -->
+         <!-- Vincular CSS para que se conecte a la página principal -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+             <!-- Vincular CSS para que se conecte al menú desplegable -->
+    <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera-->
+    <header>
+        <!-- Logo Room4U, si le das clic te lleva al inicio-->
+        <a href="./index.html">
+            <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <!-- Menú hamburguesa -->
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span> <!--Primera línea del menú-->
+            <span></span> <!--Segunda línea del menú-->
+            <span></span> <!--Tercera línea del menú-->
+        </div>
+        <!-- Menú desplegable -->
+        <ul class="menu-desplegable" id="menu">
+        <!-- Si el usuario hace clic, va a la página deseada -->
+            <li><a href="./inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="./publicar/index.html">Publicar</a></li>
+            <li><a href="./favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <main>
+        <div id="barraBusqueda" class="barra-busqueda">
+            Buscar inmueble  <!-- Lo que dice la barra de búsqueda -->
+            <img src="Assets/IMG/lupa.png" alt="Buscar">  <!-- Imagen de la lupa-->
+        </div>
+
+        <!-- Ventana flotante para el formulario -->
+        <div id="ventanaFlotante" class="ventana-flotante oculto">
+
+        <!-- Primera pregunta del formulario -->
+        <div class="filtro-seccion">
+                <p>¿Qué estás buscando?</p>
+                <div class="opciones">
+        <!-- Botones para que elija su opción deseada-->
+                    <button>Casa</button>
+                    <button>Cuarto</button>
+                    <button>Departamento</button>
+                </div>
+            </div>
+        <!-- Segunda pregunta del formulario -->
+            <div class="filtro">
+                <label>¿Cuál es tu presupuesto?</label>
+                <div class="rango-contenedor">
+        <!--RCONTENEDOR DE LA BARRA DESLIZANTE Y LOS VALORES-->
+        <div class="rango-contenedor">
+            <input type="range" id="rangoBarra" min="0" max="100000" step="500" value="0,50000" multiple>
+            <div class="valores-rango">
+                <input type="number" id="minValor" value="0" min="0" max="100000" step="500">
+                <input type="number" id="maxValor" value="50000" min="0" max="100000" step="500">
+            </div>
+        </div>
+        <!-- Tercera pregunta del formulario -->
+            <div class="filtro-seccion">
+                <p>Selecciona las delegaciones donde quieres rentar</p>
+        <!-- Cada botón es una delegación que el usuario puede elegir -->
+                <div class="delegaciones">
+                    <button>Álvaro Obregón</button>
+                    <button>Benito Juárez</button>
+                    <button>Coyoacán</button>
+                    <button>Cuajimalpa</button>
+                    <button>Cuauhtémoc</button>
+                    <button>Gustavo A. Madero</button>
+                    <button>La Magdalena Contreras</button>
+                    <button>Miguel Hidalgo</button>
+                    <button>Tláhuac</button>
+                    <button>Tlalpan</button>
+                    <button>Venustiano Carranza</button>
+                    <button>Xochimilco</button>
+                    <button>Milpa Alta</button>
+                    <button>Azcapotzalco</button>
+                    <button>Iztapalapa</button>
+                    <button>Iztacalco</button>
+                </div>
+            </div>
+<!-- Botón de busqueda del inmueble luego de llenar el formulario -->
+            <button class="boton-accion">Buscar inmueble</button>
+        </div>
+    </main>
+
+    <!-- Vincular JS para que haya funciones y sea interactivo en la página -->
+    <script src="Assets/JS/script.js" defer></script>
+    <script src="Assets/JS/menu/menu.js" defer></script>
+</body>
+</html>

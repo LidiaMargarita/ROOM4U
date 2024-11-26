@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../recuperar/style.css">
+    <link rel="stylesheet" href="../../Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <a href="../../index.html">
+            <img src="../../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../index.html">Iniciar sesión</a></li>
+            <li><a href="../../publicar/index.html">Publicar</a></li>
+            <li><a href="../../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <div class="form-container">
+            <h1>Recuperar Contraseña</h1>
+            <p>Por favor, ingresa el correo con el que te registraste. Te enviaremos tu contraseña.</p>
+            <form id="recuperarForm">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <button type="submit" class="recover-button">Recuperar Contraseña</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../Assets/JS/menu/menu.js" defer></script>
+    <script src="./script.js" defer></script>
+</body>
+</html>

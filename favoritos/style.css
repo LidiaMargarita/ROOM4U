@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+    list-style: none;
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 70px; /* Debajo de la cabecera */
+    right: 20px; /* Pegado al lado derecho */
+    z-index: 100; /* Asegura que quede encima de otros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 10px 0;
+}
+
+.menu-desplegable li {
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+.menu-desplegable a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #333; /* Texto gris oscuro */
+}
+
+.menu-desplegable a:hover {
+    background-color: #FFD700; /* Fondo amarillo brillante al pasar el mouse */
+    color: #fff; /* Texto blanco */
+}
+
+
+/* Contenedor principal */
+.main-container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Grid de favoritos */
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.tarjeta {
+    background-color: #b9fbc5;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta:hover {
+    background-color: #94d9a4;
+    cursor: pointer;
+}

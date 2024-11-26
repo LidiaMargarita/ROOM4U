@@ -1,0 +1,46 @@
+/*EL CSS ES PARA VER COMO SE VA A VER EL MENÚ DINÁMICO DESPLEGABLE*/
+
+/* Menú desplegable */
+.menu-desplegable {
+    list-style: none; /* Siempre van esos 3 */
+    padding: 0;
+    margin: 0;
+    display: none; /* Oculta el menú al inicio */   
+/*POSITION, TOP Y RIGHT  ES DONDE PONEMOS EL LUGAR DONDE QUEREMOS EL MENÚ*/
+    position: absolute; /* Muestra el menú */
+    top: 70px; /* Se pone debajo de la cabecera */
+    right: 20px; /* Pone el menú a la derecha */
+    background-color: #fff; /* Color del fondo del menú */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra  */
+    border-radius: 5px; /* Bordes redondos del menú */
+    z-index: 1000; /* Qué el menú este en primer plano */
+}
+
+/*Estilo para cada opción del menú*/
+.menu-desplegable li {
+    padding: 10px 15px; /* Espacio entre las opciones */
+    border-bottom: 1px solid #c0bebe; /* Línea que divide cada opción del menú */
+}
+
+/* Quitar la última línea del menú para que no se vea feo */
+.menu-desplegable li:last-child {
+    border-bottom: none; /* Esto quita la última línea del menú para que no se vea feo */
+}
+
+/*Estilo de cada enlace de cada opción del menú*/
+.menu-desplegable li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #000; /* Color del texto  */
+    font-size: 16px; /* Tamaño del texto */
+    display: block; /* Esto hace que el texto se pueda hacer clic */
+}
+
+/*Cambia el color cuando vas pasando por una opción*/
+.menu-desplegable li a:hover {
+    background-color: #eeeeee; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Transición para ocultar el menú pero que no sea de golpe*/
+.menu-desplegable {
+    transition: all 0.3s ease-in-out; 
+}

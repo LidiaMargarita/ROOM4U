@@ -1,0 +1,208 @@
+/*-----------------------------ESTILO DE LA PÁGINA PRINCIPAL--------------------------------------*/
+/* General Reset */
+* {
+    /* Siempre van esos 3 para eliminar el margen y el relleno */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ESTILO DEL CUERPO DE PÁGINA */
+body {
+    font-family: 'ADLaM Display', sans-serif; /* Tipo de letra */
+    background-color: #f9f9f9; /* Color del fondo de la página */
+}
+
+/* Cabecera */
+header {
+    background-color: #f5d10d; /* Color de la cabecera */
+    display: flex; /* Siempre va para organizar */
+    justify-content: space-between; /* Espacio entre el logo y el menú*/
+    align-items: center; /* Alinear verticalmente  */
+    padding: 10px 20px; /* Espacio interno  */
+    height: 75px;  /* Altura de la cabecera  */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra */
+}
+/* Logo de la página */
+.logo {
+    height: 333px; /* Tamaño ajustado del logo */
+    object-fit: contain; /* Mantiene las proporciones de la imagen  */
+    margin-top: 18px; /* Mover hacia abajo  */
+    margin-left: -190px; /* Mover hacia la izquierda */
+}
+
+/* icono del Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;          /* Siempre va para organizar */
+    flex-direction: column; /* Apilarlas líneas verticalmente  */
+    gap: 5px;  /* Espacio entre las líneas*/
+    cursor: pointer; /* Cambiar el cursor al pasar*/
+   
+}
+
+.menu-hamburguesa span {
+    background-color: #000; /* Color de las líneas*/
+    height: 4px; /* Altura de cada línea*/
+    width: 26px; /* Longitud de las líneas*/
+    border-radius: 2px;  /* Bordes redondeados*/
+}
+
+/* Barra de búsqueda */
+.barra-busqueda {
+    display: flex; /* Siempre va para organizar */
+    align-items: center;  /*Centra verticalmente el contenido*/
+    justify-content: space-between;  /* Espacio entre texto e imagen*/
+    background-color: #f3e6e6fd;   /* Color del fondo de la barra */
+    color: #0c0b0b;   /* Color del texto de la barra */
+    font-size: 23px;  /*TAMAÑO DE LA Letra de la barra*/
+    border: 2px solid #161616;  /* Color del margen de la barra */
+    border-radius: 25px;   /* Bordes redondeados*/
+    padding: 10px 20px;   /* Espacio interno  */
+    width: 700px;    /* Ancho de la barra*/
+    height: 60px;    /* Altura de la barra  */
+    margin: 70px auto; /* Centra la barra y añade mergen*/
+    cursor: pointer;    /* Cambiar el cursor al pasar*/
+    position: relative;   /*Es para posicionar la lupa*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);   /* Sombra */
+}
+.barra-busqueda img {   /* Imagen de la barra de búsqueda */
+    position: absolute; /* Relativo a la barra */
+    right: 20px; /* Fijar a la derecha */
+    top: 50%; /* Centrar verticalmente dentro de la barra */
+    transform: translateY(-50%); /* Ajustar para centrar exactamente */
+    width: 24px; /* Cambia aquí el tamaño de la lupa */
+    height: 24px; /* Cambia aquí el tamaño de la lupa */
+    pointer-events: none; /* Para que no interfiera al hacer clic */
+}
+
+/* Ventana flotante */
+.ventana-flotante {
+    display: none;   /* Oculta la ventana*/
+    position: absolute;  /*POSICIÓN RELATIVA DE LA BARRA*/
+    top: 206px;  /*POSICIÓN DE LA VENTANA PARA PEGARLA A LA BARRA*/
+    left: 50%;
+    transform: translateX(-50%);  /*CENTRADO HORIZONTAL*/
+    background-color: #faf8f7; /* Fondo beige */
+    border-radius: 20px;
+    padding: 20px;
+    width: 700px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25); /* Sombra visible */
+    z-index: 1000;   /* Encima de otros elementos*/
+    border: 2px solid #a6a6a6; /* Borde gris */
+}
+
+/*texto de la ventana */
+.ventana-flotante h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+/*Letra y estilo de las preguntas*/
+/* Preguntas dentro de las secciones del formulario */
+.filtro-seccion p {
+    font-size: 18px; /* Cambia el tamaño de la letra aquí */
+    margin-bottom: 15px; /* Espacio debajo de las preguntas */
+    color: #0e0d0d; /* Color del texto */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+/*Letra y estilo de las preguntas*/
+/* Pregunta dos cual es tu presupuesto */
+.filtro label{
+    margin-top: 10px;    /*separación de cada pregunta*/
+    font-size: 18px; /* Cambia el tamaño de la letra aquí */
+    display:block;
+}
+
+/* Rango de la barra deslizante */
+/* Rango de la barra deslizante */
+.rango-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#rangoBarra {
+    width: 80%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    appearance: none;
+}
+
+#rangoBarra::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#rangoBarra::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.valores-rango {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.valores-rango input {
+    width: 70px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Botones del filtro*/
+
+.opciones{
+    margin-top: -10px;  /*espacio de la pregunta y abajo el botón*/
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.opciones button, .delegaciones button {
+    width: 130px;    /*ancho del botón*/
+    height: 40px;  /*altura del botón*/
+    font-size: 17px;  /*tamaño del texto del botón*/
+    text-align: center;
+    background-color: #fff;  /* Fondo de los botones */
+    color: #130b0b;  /* Color del texto */
+    padding: 10px; /* Espacio interno*/
+    border: 3px solid #979090;  /* Borde del botón*/
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.opciones button:hover, .delegaciones button:hover, .opciones button.active, .delegaciones button.active {
+    background-color: #acde92; /* Fondo al tocar el botón*/
+    color: #0a0a0a; /* Color del texto */
+}
+
+/* Botón de acción */
+.boton-accion {
+    display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
+    width: auto; /* Ajustar automáticamente el ancho según el contenido */
+    padding: 10px 20px; /* Espaciado interno reducido */
+    background-color: #ebbe00; /* Color de fondo */
+    color: #0e0a0a; /* Color del texto */
+    text-align: center;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    position: absolute; /* Posicionamiento absoluto dentro de la ventana flotante */
+    bottom: 20px; /* Separación desde la parte inferior */
+    right: 20px; /* Separación desde la derecha */
+    font-size: 14px; /* Tamaño del texto más pequeño */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al botón */
+    transition: transform 0.2s ease; /* Animación para el efecto hover */
+}
+

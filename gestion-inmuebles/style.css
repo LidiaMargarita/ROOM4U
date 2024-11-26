@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+header {
+    background-color: #FFD700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 180px;
+    object-fit: contain;
+}
+
+/*menu hamburguesa*/
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajusta según la altura de tu cabecera */
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu-desplegable li {
+    padding: 10px 20px;
+}
+
+.menu-desplegable li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
+
+/* Contenedor principal */
+.main-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Fotos */
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    background-color: #20fa94; /* Verde claro */
+    color: rgb(10, 6, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botón de editar */
+.edit-button {
+    background-color: #a091fa;
+    color: rgb(10, 8, 8);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.edit-button:hover {
+    background-color: #9387e5;
+}
+
+/* Detalles del inmueble */
+.details {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+/* Botones de acción */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.assign-client {
+    background-color: #f7d61cc0;
+}
+
+.status {
+    background-color: #19c919;
+    color: rgb(10, 10, 10);
+}
+
+.status.occupied {
+    background-color: #ff5739;
+}
+
+.delete {
+    background-color: #79a1f8;
+    color: rgb(5, 4, 4);
+}
+
+.save {
+    background-color: #aba0f5;
+    color: #0a0a0a;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.save:hover {
+    background-color: #96785d;
+}

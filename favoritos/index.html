@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Favoritos</title>
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="../favoritos/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <!-- Logo que redirige a la página principal -->
+        <a href="../index.html">
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <!-- Menú hamburguesa -->
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Menú desplegable -->
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <h1>Favoritos ❤️</h1>
+        <div class="favoritos-grid">
+            <!-- Tarjetas de inmuebles -->
+            <div class="tarjeta">
+                <p>FOTO</p>
+            </div>
+            <div class="tarjeta">
+                <p>FOTO</p>
+            </div>
+            <div class="tarjeta">
+                <p>FOTO</p>
+            </div>
+            <div class="tarjeta">
+                <p>FOTO</p>
+            </div>
+            <!-- Puedes duplicar estos divs para más fotos -->
+        </div>
+    </main>
+
+    <!-- Vincular JS -->
+    <script src="../Assets/JS/menu/menu.js" defer></script>
+    <script src="../favoritos/script.js" defer></script>
+</body>
+</html>

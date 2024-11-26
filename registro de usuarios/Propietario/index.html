@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Propietario</title>
+    <link rel="stylesheet" href="../Propietario/style.css">
+    <link rel="stylesheet" href="../../Assets/CSS/menudesplegable/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <a href="../../index.html">
+            <img src="../../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../../publicar/index.html">Publicar</a></li>
+            <li><a href="../../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <h1>Registro de propietario</h1>
+        <form id="registroForm">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+
+            <label for="celular">Número de celular:</label>
+            <input type="tel" id="celular" name="celular" placeholder="Número de celular" maxlength="10" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña (mínimo 8 caracteres)" minlength="8" required>
+
+            <button type="submit" id="btnRegistro">Registrarme</button>
+        </form>
+    </main>
+
+    <script src="../../Assets/JS/menu/menu.js" defer></script>
+    <script src="../Propietario/script.js" defer></script>
+</body>
+</html>

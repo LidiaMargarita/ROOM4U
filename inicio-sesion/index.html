@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../inicio-sesion/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <!-- Logo que redirige a la página principal -->
+        <a href="../index.html">
+        <!-- Logoroom4u -->
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <!-- Menú hamburguesa -->
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Menú desplegable -->
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <!-- Imagen decorativa -->
+        <div class="login-image">
+            <img src="../Assets/IMG/login-image.png" alt="Imagen decorativa de inicio de sesión">
+        </div>
+        <!-- Contenedor del formulario -->
+        <div class="login-form-container">
+            <!-- Títulos centrados correctamente -->
+            <div class="form-header">
+                <h2>¡Bienvenido de nuevo!</h2>
+                <p>Iniciar sesión</p>
+            </div>
+            <!-- Formulario -->
+            <form action="../login.php" method="POST">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <span class="toggle-password" id="togglePassword">👁️</span>
+                </div>
+                <button type="submit" class="login-button">Iniciar sesión</button>
+            </form>
+            <!-- Enlaces -->
+            <div class="links">
+                <a href="../inicio-sesion/recuperar/index.html" id="forgot-password">Olvidé mi contraseña</a>
+                
+                <p>¿No tienes cuenta? <a href="../registro de usuarios/index.html" id="register-link">Regístrate</a></p>
+            </div>
+        </div>
+    </main>
+   
+    <!-- Vincular JS del menú -->
+    <script src="../Assets/JS/menu/menu.js" defer></script>
+    <!-- Vincular JS del inicio de sesion-->
+    <script src="../inicio-sesion/script.js" defer></script>
+
+</body>
+</html>
