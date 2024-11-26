@@ -1,13 +1,11 @@
-// Este código busca el cuadro donde haces clic para abrir la ventana de buscar inmueble.
-const barraBusqueda = document.getElementById("barraBusqueda");
-// Este busca la ventana que aparece cuando haces clic en la barra de búsqueda.
-const ventanaFlotante = document.getElementById("ventanaFlotante");
-// Aquí seleccionamos todos los botones donde escoges si buscas "Casa", "Cuarto" o "Departamento".
-const botonesOpciones = document.querySelectorAll(".opciones button");
-// Aquí seleccionamos todos los botones donde eliges las delegaciones (como "Xochimilco" o "Tláhuac").
-const botonesDelegaciones = document.querySelectorAll(".delegaciones button");
-// Elementos relacionados con el rango de precios
-const rangoBarra = document.getElementById("rangoBarra"); // La barra deslizante
+// Seleccionamos elementos importantes de la página
+const barraBusqueda = document.getElementById("barraBusqueda"); // Barra de búsqueda
+const ventanaFlotante = document.getElementById("ventanaFlotante"); // Ventana flotante
+const botonesOpciones = document.querySelectorAll(".opciones button"); // Botones de opciones (Casa, Cuarto, Departamento)
+const botonesDelegaciones = document.querySelectorAll(".delegaciones button"); // Botones de delegaciones
+
+// Elementos relacionados con el rango y valores
+const rangoBarra = document.getElementById("rangoBarra"); // Barra de rango única
 const minValor = document.getElementById("minValor"); // Caja de texto para el valor mínimo
 const maxValor = document.getElementById("maxValor"); // Caja de texto para el valor máximo
 
@@ -36,58 +34,66 @@ botonesDelegaciones.forEach((button) => {
     });
 });
 
-// 4. Actualizar los valores en las cajas de texto mientras mueves los botones de la barra
-rangoBarra.addEventListener("input", (event) => {
-    // Dividimos el valor en los dos extremos (mínimo y máximo)
-    const valores = rangoBarra.value.split(",").map(Number);
-    minValor.value = valores[0]; // Actualizar el valor mínimo en la caja de texto
-    maxValor.value = valores[1]; // Actualizar el valor máximo en la caja de texto
-    actualizarFondoBarra(valores[0], valores[1]); // Cambiar el color de la barra
-});
-
-// 5. Sincronizar los sliders con las cajas de texto manualmente
-minValor.addEventListener("input", () => {
-    const minValue = parseInt(minValor.value) || 0; // Aseguramos un valor numérico
-    const maxValue = parseInt(maxValor.value) || 20000; // Aseguramos un valor numérico
-
-    // Aseguramos que el mínimo no sea mayor que el máximo
-    if (minValue > maxValue) {
-        minValor.value = maxValue - 500;
-    }
-    rangoBarra.value = '${minValor.value},${maxValor.value}';
-    actualizarFondoBarra(minValor.value, maxValor.value);
-});
-
-maxValor.addEventListener("input", () => {
-    const minValue = parseInt(minValor.value) || 0; // Aseguramos un valor numérico
-    const maxValue = parseInt(maxValor.value) || 20000; // Aseguramos un valor numérico
-
-    // Aseguramos que el máximo no sea menor que el mínimo
-    if (maxValue < minValue) {
-        maxValor.value = minValue + 500;
-    }
-    rangoBarra.value = '${minValor.value},${maxValor.value}';
-    actualizarFondoBarra(minValor.value, maxValor.value);
-});
-
-// 6. Actualizar el fondo de la barra deslizante para reflejar los valores seleccionados
+// 4. Actualizar el fondo de la barra para reflejar el rango seleccionado
 const actualizarFondoBarra = (min, max) => {
-    const porcentajeMin = (min / 20000) * 100; // Calcula porcentaje del rango mínimo
-    const porcentajeMax = (max / 20000) * 100; // Calcula porcentaje del rango máximo
+    const porcentajeMin = (min / 20000) * 100; // Calcula el porcentaje del mínimo
+    const porcentajeMax = (max / 20000) * 100; // Calcula el porcentaje del máximo
 
+    // Cambia el fondo de la barra para mostrar el rango seleccionado
     rangoBarra.style.background = `linear-gradient(to right, 
         #ddd ${porcentajeMin}%, 
         #62bb2f ${porcentajeMin}%, 
         #62bb2f ${porcentajeMax}%, 
-        #ddd ${porcentajeMax}%)`; // Actualizamos el degradado
+        #ddd ${porcentajeMax}%)`;
 };
+
+// 5. Manejar el movimiento de los botones en la barra
+rangoBarra.addEventListener("input", (event) => {
+    const valores = rangoBarra.value.split(","); // Obtenemos los valores de mínimo y máximo
+    const min = parseInt(valores[0]); // Valor mínimo
+    const max = parseInt(valores[1]); // Valor máximo
+
+    // Actualizar las cajas de texto con los valores actuales
+    minValor.value = min;
+    maxValor.value = max;
+
+    // Actualizar el fondo dinámico de la barra
+    actualizarFondoBarra(min, max);
+});
+
+// 6. Actualizar los sliders al escribir en las cajas de texto
+minValor.addEventListener("input", () => {
+    let min = parseInt(minValor.value); // Valor mínimo introducido
+    let max = parseInt(maxValor.value); // Valor máximo actual
+
+    // Validar que el mínimo no sea mayor que el máximo
+    if (min >= max) {
+        min = max - 500; // Ajustamos para evitar cruces
+        minValor.value = min; // Actualizamos el valor en la caja de texto
+    }
+
+    // Actualizar los valores de la barra
+    rangoBarra.value = '${min},${max}';
+    actualizarFondoBarra(min, max); // Actualizar el fondo
+});
+
+maxValor.addEventListener("input", () => {
+    let min = parseInt(minValor.value); // Valor mínimo actual
+    let max = parseInt(maxValor.value); // Valor máximo introducido
+
+    // Validar que el máximo no sea menor que el mínimo
+    if (max <= min) {
+        max = min + 500; // Ajustamos para evitar cruces
+        maxValor.value = max; // Actualizamos el valor en la caja de texto
+    }
+
+    // Actualizar los valores de la barra
+    rangoBarra.value = '${min},${max}';
+    actualizarFondoBarra(min, max); // Actualizar el fondo
+});
 
 // 7. Al cargar la página, inicializar el fondo de la barra
-const inicializarRango = () => {
-    const valores = rangoBarra.value.split(",").map(Number); // Obtener valores iniciales
-    minValor.value = valores[0]; // Establecer valor mínimo inicial
-    maxValor.value = valores[1]; // Establecer valor máximo inicial
-    actualizarFondoBarra(valores[0], valores[1]); // Actualizar el fondo de la barra
-};
-
-inicializarRango(); // Ejecutar al cargar la página
+const valoresIniciales = rangoBarra.value.split(","); // Obtenemos los valores iniciales
+const minInicial = parseInt(valoresIniciales[0]); // Valor inicial mínimo
+const maxInicial = parseInt(valoresIniciales[1]); // Valor inicial máximo
+actualizarFondoBarra(minInicial, maxInicial); // Inicializar el fondo dinámico

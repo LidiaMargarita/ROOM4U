@@ -113,77 +113,82 @@ header {
     display:block;
 }
 /*---------------------------------------------------------------------------------------*/
-/* ESTILO DEL Rango de la barra deslizante */
-/* Rango de la barra deslizante */
-.rango-contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-/*ESTILO DE LAS BARRAS*/
-/* Barra deslizante principal */
+/* Barra de rango única */
 #rangoBarra {
-    width: 80%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #FFD700 0%, #62bb2f 50%, #FFD700 100%);
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    margin: 10px 0; /* Separación */
+    width: 80%; /* Ancho de la barra */
+    height: 8px; /* Altura de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    background: #ddd; /* Fondo inicial (gris) */
+    outline: none; /* Sin contorno al hacer clic */
+    appearance: none; /* Quitar estilos predeterminados */
+    position: relative;
+    cursor: pointer;
 }
 
-/* Botón mínimo y máximo (azules con sombra) */
+/* Fondo dinámico de la barra */
+#rangoBarra::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, 
+        #ddd 0%, 
+        #62bb2f 0%, 
+        #62bb2f 100%, 
+        #ddd 100%);
+    height: 8px; /* Altura consistente con la barra */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para los botones de la barra (Webkit) */
 #rangoBarra::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Azul degradado */
-    border: 2px solid #fff; /* Borde blanco para contraste */
+    -webkit-appearance: none; /* Quitar estilo predeterminado */
+    appearance: none;
+    width: 16px; /* Ancho del botón */
+    height: 16px; /* Altura del botón */
+    background: #007bff; /* Color azul del botón */
+    border: 2px solid #ffffff; /* Borde blanco alrededor del botón */
     border-radius: 50%; /* Forma circular */
-    cursor: pointer;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra para que resalten */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    z-index: 10;
 }
 
+/* Estilo para los botones de la barra (Mozilla) */
 #rangoBarra::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Azul degradado */
-    border: 2px solid #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    width: 16px;
+    height: 16px;
+    background: #007bff; /* Color azul del botón */
+    border: 2px solid #ffffff; /* Borde blanco alrededor del botón */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
 }
 
-/* Fondo dinámico */
-#rangoBarra {
-    background: linear-gradient(to right, #ddd 0%, #FFD700 50%, #ddd 100%);
-    border-radius: 5px;
-}
-
-/* Para los valores (cuadros de texto) */
+/* Valores de rango (cajas de texto) */
 .valores-rango {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 5px; /* Espacio respecto a la barra */
+    display: flex; /* Alineación en fila */
+    justify-content: space-between; /* Separar los valores mínimo y máximo */
+    width: 80%; /* Ancho proporcional al de la barra */
+    gap: 20px; /* Espaciado entre los valores */
 }
 
 .valores-rango input {
-    width: 70px;
-    text-align: center;
-    font-size: 14px;
-    padding: 5px;
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 5px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    width: 70px; /* Ancho de las cajas */
+    text-align: center; /* Texto centrado */
+    font-size: 14px; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    outline: none; /* Sin contorno al enfocar */
+    transition: border-color 0.3s ease; /* Animación suave */
 }
 
-/* Efecto hover en los cuadros */
-.valores-rango input:hover {
-    border-color: #007BFF; /* Color azul destacado */
+/* Efecto al enfocar las cajas de texto */
+.valores-rango input:focus {
+    border-color: #62bb2f; /* Cambiar color del borde al enfocar */
+    box-shadow: 0px 0px 5px rgba(98, 187, 47, 0.5); /* Sombra verde */
+}
+
+/* Texto adicional o etiquetas (si es necesario) */
+.rango-contenedor label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
 }
 /*-------------------------------------------------------------------------------------------*/
 /* Botones del filtro*/
