@@ -251,7 +251,6 @@ header {
     bottom: 20px; /* Separación desde la parte inferior */
     right: 20px; /* Separación desde la derecha */
     font-size: 14px; /* Tamaño del texto más pequeño */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al botón */
     transition: transform 0.2s ease; /* Animación para el efecto hover */
 }
 
