@@ -113,57 +113,77 @@ header {
     display:block;
 }
 /*---------------------------------------------------------------------------------------*/
-/* Barra de rango única */
+/* ESTILO DEL Rango de la barra deslizante */
+/* Rango de la barra deslizante */
 .rango-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
+/*ESTILO DE LAS BARRAS*/
+/* Barra deslizante principal */
 #rangoBarra {
     width: 80%;
     height: 8px;
     border-radius: 5px;
-    background: linear-gradient(to right, #ddd, #62bb2f, #ddd);
+    background: linear-gradient(to right, #FFD700 0%, #62bb2f 50%, #FFD700 100%);
     outline: none;
     appearance: none;
-    position: relative;
+    -webkit-appearance: none;
+    margin: 10px 0; /* Separación */
 }
 
+/* Botón mínimo y máximo (azules con sombra) */
 #rangoBarra::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(to right, #62bb2f, #0cc0df);
-    border-radius: 50%;
-    border: 2px solid #ffffff;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Azul degradado */
+    border: 2px solid #fff; /* Borde blanco para contraste */
+    border-radius: 50%; /* Forma circular */
     cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra para que resalten */
 }
 
 #rangoBarra::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(to right, #62bb2f, #0cc0df);
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Azul degradado */
+    border: 2px solid #fff;
     border-radius: 50%;
-    border: 2px solid #ffffff;
     cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Fondo dinámico */
+#rangoBarra {
+    background: linear-gradient(to right, #ddd 0%, #FFD700 50%, #ddd 100%);
+    border-radius: 5px;
+}
+
+/* Para los valores (cuadros de texto) */
 .valores-rango {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    gap: 15px;
+    margin-top: 5px; /* Espacio respecto a la barra */
 }
 
 .valores-rango input {
-    width: 80px;
+    width: 70px;
     text-align: center;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 5px;
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Efecto hover en los cuadros */
+.valores-rango input:hover {
+    border-color: #007BFF; /* Color azul destacado */
 }
 /*-------------------------------------------------------------------------------------------*/
 /* Botones del filtro*/
