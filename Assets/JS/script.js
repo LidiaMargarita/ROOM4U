@@ -6,102 +6,75 @@ const ventanaFlotante = document.getElementById("ventanaFlotante");
 const botonesOpciones = document.querySelectorAll(".opciones button");
 // Aquí seleccionamos todos los botones donde eliges las delegaciones.
 const botonesDelegaciones = document.querySelectorAll(".delegaciones button");
-// Seleccionamos los elementos necesarios
-const slider = document.getElementById("slider");
-const botonMin = document.getElementById("botonMin");
-const botonMax = document.getElementById("botonMax");
-const minValor = document.getElementById("minValor");
-const maxValor = document.getElementById("maxValor");
 
-// Rango mínimo y máximo permitidos
-const rangoMin = 0;
-const rangoMax = 20000;
+// Buscamos el control deslizante y las cajitas donde se escriben los números de rango.
+const rango = document.getElementById("rangoBarra"); // Barra deslizante
+const minValor = document.getElementById("minValor"); // Caja de texto para el valor mínimo
+const maxValor = document.getElementById("maxValor"); // Caja de texto para el valor máximo
 
-// Estado inicial de los valores
-let min = parseInt(minValor.value);
-let max = parseInt(maxValor.value);
+// Inicializamos los valores mínimos y máximos
+let min = 0;
+let max = 20000;
 
-// Función para actualizar las posiciones de los botones
-function actualizarPosiciones() {
-    const sliderWidth = slider.offsetWidth;
-    const botonWidth = botonMin.offsetWidth;
-    const minLeft = ((min - rangoMin) / (rangoMax - rangoMin)) * sliderWidth - botonWidth / 2;
-    const maxLeft = ((max - rangoMin) / (rangoMax - rangoMin)) * sliderWidth - botonWidth / 2;
-
-    botonMin.style.left = '${Math.max(0, Math.min(sliderWidth - botonWidth, minLeft))}px';
-    botonMax.style.left = '${Math.max(0, Math.min(sliderWidth - botonWidth, maxLeft))}px';
-
-    slider.style.background = 'linear-gradient(to right, #ddd ${minLeft + botonWidth / 2}px, #0cc0df ${minLeft + botonWidth / 2}px, #0cc0df ${maxLeft + botonWidth / 2}px, #ddd ${maxLeft + botonWidth / 2}px)';
-}
-
-// Eventos para mover el botón mínimo
-botonMin.addEventListener("mousedown", (e) => {
-    const sliderWidth = slider.offsetWidth;
-    const startX = e.clientX;
-
-    const onMouseMove = (e) => {
-        const deltaX = e.clientX - startX;
-        const porcentaje = deltaX / sliderWidth;
-        const nuevoMin = Math.round(min + porcentaje * (rangoMax - rangoMin));
-
-        if (nuevoMin >= rangoMin && nuevoMin <= max - 500) {
-            min = nuevoMin;
-            minValor.value = min;
-            actualizarPosiciones();
-        }
-    };
-
-    const onMouseUp = () => {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-});
-
-// Eventos para mover el botón máximo
-botonMax.addEventListener("mousedown", (e) => {
-    const sliderWidth = slider.offsetWidth;
-    const startX = e.clientX;
-
-    const onMouseMove = (e) => {
-        const deltaX = e.clientX - startX;
-        const porcentaje = deltaX / sliderWidth;
-        const nuevoMax = Math.round(max + porcentaje * (rangoMax - rangoMin));
-
-        if (nuevoMax <= rangoMax && nuevoMax >= min + 500) {
-            max = nuevoMax;
-            maxValor.value = max;
-            actualizarPosiciones();
-        }
-    };
-
-    const onMouseUp = () => {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-});
-
-// Actualizar los valores al escribir en las cajas
-minValor.addEventListener("input", () => {
-    const nuevoMin = parseInt(minValor.value);
-    if (nuevoMin >= rangoMin && nuevoMin <= max - 500) {
-        min = nuevoMin;
-        actualizarPosiciones();
+// 1. Mostrar y ocultar la ventana flotante al hacer clic en la barra de búsqueda
+barraBusqueda.addEventListener("click", () => {
+    // Cambia entre mostrar ("block") y ocultar ("none") la ventana flotante
+    if (ventanaFlotante.style.display === "block") {
+        ventanaFlotante.style.display = "none";
+    } else {
+        ventanaFlotante.style.display = "block";
     }
+});
+
+// 2. Manejar los clics en los botones de opciones (Casa, Cuarto, Departamento)
+botonesOpciones.forEach((button) => {
+    button.addEventListener("click", () => {
+        // Alterna el estilo "active" para marcar/desmarcar los botones
+        button.classList.toggle("active");
+    });
+});
+
+// 3. Manejar los clics en los botones de delegaciones
+botonesDelegaciones.forEach((button) => {
+    button.addEventListener("click", () => {
+        button.classList.toggle("active");
+    });
+});
+
+// 4. Función para actualizar los valores en los cuadros de texto al mover los botones de la barra
+const actualizarValores = () => {
+    const valores = rango.value.split(",").map(Number); // Obtenemos los valores de los botones
+    min = valores[0]; // Actualizamos el valor mínimo
+    max = valores[1]; // Actualizamos el valor máximo
+
+    minValor.value = min; // Mostramos el valor mínimo en la caja
+    maxValor.value = max; // Mostramos el valor máximo en la caja
+};
+
+// 5. Escuchar el movimiento de los botones en la barra deslizante
+rango.addEventListener("input", () => {
+    actualizarValores(); // Actualizamos los valores dinámicamente
+});
+
+// 6. Actualizar la barra al escribir en las cajas de texto
+minValor.addEventListener("input", () => {
+    min = parseInt(minValor.value) || 0; // Asegurarnos de que sea un número
+    if (min >= max) {
+        min = max - 1; // Restringir para que no supere el máximo
+        minValor.value = min; // Corregir el valor en la caja
+    }
+    rango.value = '${min},${max}'; // Actualizar la posición de los botones en la barra
 });
 
 maxValor.addEventListener("input", () => {
-    const nuevoMax = parseInt(maxValor.value);
-    if (nuevoMax <= rangoMax && nuevoMax >= min + 500) {
-        max = nuevoMax;
-        actualizarPosiciones();
+    max = parseInt(maxValor.value) || 20000; // Asegurarnos de que sea un número
+    if (max <= min) {
+        max = min + 1; // Restringir para que no sea menor que el mínimo
+        maxValor.value = max; // Corregir el valor en la caja
     }
+    rango.value = '${min},${max}'; // Actualizar la posición de los botones en la barra
 });
 
-// Inicializar las posiciones
-actualizarPosiciones();
+// 7. Inicializar los valores al cargar la página
+rango.value = '${min},${max}'; // Configurar los valores iniciales en la barra
+actualizarValores(); // Mostrar los valores iniciales en las cajas

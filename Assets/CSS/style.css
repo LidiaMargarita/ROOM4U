@@ -114,35 +114,56 @@ header {
 }
 /*---------------------------------------------------------------------------------------*/
 /* Barra de rango única */
-/* Botones (mínimo y máximo) */
-.boton {
-    position: absolute;
-    top: -6px;
+.rango-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#rangoBarra {
+    width: 80%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ddd, #62bb2f, #ddd);
+    outline: none;
+    appearance: none;
+    position: relative;
+}
+
+#rangoBarra::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: linear-gradient(to right, #FFD700, #0cc0df);
-    border: 2px solid white;
+    background: linear-gradient(to right, #62bb2f, #0cc0df);
     border-radius: 50%;
+    border: 2px solid #ffffff;
     cursor: pointer;
-    z-index: 10;
-    transition: transform 0.2s;
 }
 
-.boton:hover {
-    transform: scale(1.2);
+#rangoBarra::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to right, #62bb2f, #0cc0df);
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    cursor: pointer;
 }
 
-/* Valores debajo de la barra */
 .valores-rango {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    width: 80%;
+    gap: 15px;
 }
 
 .valores-rango input {
     width: 80px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
 }
 /*-------------------------------------------------------------------------------------------*/
 /* Botones del filtro*/
