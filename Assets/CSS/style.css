@@ -209,9 +209,9 @@ header {
 
 /* Contenedor de las delegaciones */
 .delegaciones {
-    display: flex; /* Para organizar los botones en filas */
-    flex-wrap: wrap; /* Permite que los botones pasen a una nueva fila */
-    justify-content: space-evenly; /* Espaciado uniforme entre botones */
+    display: grid; /* Para organizar los botones en filas */
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center; /* Espaciado uniforme entre botones */
     gap: 15px; /* Espaciado entre botones */
     margin-top: 20px; /* Espaciado superior */
 }
