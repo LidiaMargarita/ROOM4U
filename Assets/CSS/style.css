@@ -207,6 +207,34 @@ header {
     color: #0a0a0a; /* Color del texto */
 }
 
+/* Contenedor de las delegaciones */
+.delegaciones {
+    display: flex; /* Para organizar los botones en filas */
+    flex-wrap: wrap; /* Permite que los botones pasen a una nueva fila */
+    justify-content: space-evenly; /* Espaciado uniforme entre botones */
+    gap: 15px; /* Espaciado entre botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Botón de acción */
+.boton-accion {
+    display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
+    width: auto; /* Ajustar automáticamente el ancho según el contenido */
+    padding: 10px 20px; /* Espaciado interno reducido */
+    background-color: #ebbe00; /* Color de fondo */
+    color: #0e0a0a; /* Color del texto */
+    text-align: center;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    position: absolute; /* Posicionamiento absoluto dentro de la ventana flotante */
+    bottom: 20px; /* Separación desde la parte inferior */
+    right: 20px; /* Separación desde la derecha */
+    font-size: 14px; /* Tamaño del texto más pequeño */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al botón */
+    transition: transform 0.2s ease; /* Animación para el efecto hover */
+}
+/*------------------------------------------------------------------------------------------------*/
 /* Botón de acción */
 .boton-accion {
     display: inline-block; /* Cambiado a inline-block para ajustar tamaño y posición */
