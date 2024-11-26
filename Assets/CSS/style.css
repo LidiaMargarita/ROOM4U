@@ -112,7 +112,7 @@ header {
     font-size: 18px; /* Cambia el tamaño de la letra aquí */
     display:block;
 }
-
+/*---------------------------------------------------------------------------------------*/
 /* ESTILO DEL Rango de la barra deslizante */
 /* Rango de la barra deslizante */
 .rango-contenedor {
@@ -120,50 +120,58 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 15px;
 }
 
 /*ESTILO DE LAS BARRAS*/
 /* Estilo de las barras deslizantes */
-#rangoMin,
-#rangoMax {
-    width: 90%; /* Ajusta el ancho de las barras */
+/* Barra deslizante */
+#rangoBarra {
+    width: 80%;
     height: 8px;
-    background: #be4d4d;
     border-radius: 5px;
+    background: linear-gradient(to right, #62bb2f 0%, #0cc0df 100%);
     outline: none;
     appearance: none;
-    cursor: pointer;
-    margin: 0;
 }
 
-/* Estilo del deslizador de la barra */
-#rangoMin::-webkit-slider-thumb,
-#rangoMax::-webkit-slider-thumb {
+#rangoBarra::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: #0cc0df;
+    background: #FFD700;
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Estilo de los campos de valores */
+#rangoBarra::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Contenedor de los valores */
 .valores-rango {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
+    width: 80%;
 }
 
 .valores-rango input {
     width: 80px;
-    padding: 5px;
     text-align: center;
-    border: 1px solid #685b5b;
-    border-radius: 5px;
     font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
 }
 
+/*-------------------------------------------------------------------------------------------*/
 /* Botones del filtro*/
 
 .opciones{
