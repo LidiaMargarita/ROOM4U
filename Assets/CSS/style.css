@@ -126,49 +126,58 @@ header {
 /*ESTILO DE LAS BARRAS*/
 /* Estilo de las barras deslizantes */
 /* Barra deslizante */
-#rangoBarra {
-    width: 80%;
-    height: 8px;
-    border-radius: 5px;
-    background: linear-gradient(to right, #62bb2f 0%, #0cc0df 100%);
-    outline: none;
-    appearance: none;
-}
-
-#rangoBarra::-webkit-slider-thumb {
+input[type="range"] ::-webkit-slider-thumb{
     -webkit-appearance: none;
+    width: 80%; /* Ancho de la barra */
+    height: 8px; /* Altura de la barra */
+    background: #ddd; /* Fondo gris para el rango no seleccionado */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; /* Ancho de las bolitas */
+    height: 16px; /* Altura de las bolitas */
+    background: #0cc0df; /* Color azul para las bolitas */
+    border-radius: 50%; /* Bolitas redondas */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #FFD700;
+    background: #0cc0df; /* Color azul para las bolitas */
     border-radius: 50%;
     cursor: pointer;
 }
 
-#rangoBarra::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    background: #FFD700;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Contenedor de los valores */
 .valores-rango {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 80%;
+    width: 80%; /* Ancho igual al de la barra */
+    gap: 10px; /* Espaciado entre las cajas */
 }
 
 .valores-rango input {
-    width: 80px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    outline: none;
+    width: 70px; /* Tamaño de las cajas de texto */
+    text-align: center; /* Centrar texto en las cajas */
+    font-size: 14px; /* Tamaño de letra */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo blanco */
+}
+
+/* Fondo dinámico de la barra */
+input[type="range"] {
+    background: linear-gradient(to right, #ddd 0%, #62bb2f 50%, #ddd 100%);
+}
+
+input[type="range"]:focus {
+    outline: none; /* Sin borde adicional al enfocar */
 }
 
 /*-------------------------------------------------------------------------------------------*/

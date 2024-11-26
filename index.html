@@ -63,16 +63,16 @@
                 <label>¿Cuál es tu presupuesto?</label>
                 <div class="rango-contenedor">
         <!--RCONTENEDOR DE LA BARRA DESLIZANTE Y LOS VALORES-->
-              <!-- Barra deslizante única -->
-        <input type="range" id="rangoBarra" min="0" max="20000" step="500" value="0">
-        <div class="valores-rango">
+              <!-- Barra deslizante  -->
+        <input type="range" id="rangoMin" min="0" max="20000" step="500" value="0">
+        <input type="range" id="rangoMax" min="0" max="20000" step="500" value="20000">
+        
             <!-- Cuadros de texto para mostrar los valores seleccionados -->
+            <div class="valores-rango">
             <input type="number" id="minValor" value="0" min="0" max="20000" step="500">
-            <span>-</span>
             <input type="number" id="maxValor" value="20000" min="0" max="20000" step="500">
         </div>
     </div>
-</div>
         <!-- Tercera pregunta del formulario -->
             <div class="filtro-seccion">
                 <p>Selecciona las delegaciones donde quieres rentar</p>
