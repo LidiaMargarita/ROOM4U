@@ -219,9 +219,11 @@ header {
 /* Botones de las delegaciones */
 .delegaciones button {
     width: 130px;    /* Mantén el ancho actual */
-    height: 40px;    /* Aumentamos la altura */
-    font-size: 15px; /* Reducimos un poco el tamaño de la fuente */
+    height: 50px;    /* Aumentamos la altura */
+    font-size: 14px; /* Reducimos un poco el tamaño de la fuente */
     text-align: center;
+    word-wrap: break-word;  /*divide palabras largas*/
+    white-space: normal; /*permite que el texto pase a la siguiente línea*/
     background-color: #fff;  /* Fondo */
     color: #130b0b;  /* Color del texto */
     padding: 10px;    /* Ajustamos el espacio interno */
