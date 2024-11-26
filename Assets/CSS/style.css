@@ -208,24 +208,28 @@ header {
     color: #0a0a0a; /* Color del texto */
 }
 
-/* Contenedor de las delegaciones */
-.delegaciones button {
-    width: 130px;    /* Mantén el ancho actual */
-    height: 50px;    /* Aumentamos la altura */
-    font-size: 15px; /* Reducimos un poco el tamaño de la fuente */
-    text-align: center;
-    background-color: #fff;  /* Fondo */
-    color: #130b0b;  /* Color del texto */
-    padding: 5px;    /* Ajustamos el espacio interno */
-    border: 3px solid #797777;  /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.delegaciones {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     justify-items: center;
     margin-top: 20px;
+
+}
+/* Botones de las delegaciones */
+.delegaciones button {
+    width: 130px;    /* Mantén el ancho actual */
+    height: 40px;    /* Aumentamos la altura */
+    font-size: 15px; /* Reducimos un poco el tamaño de la fuente */
+    text-align: center;
+    background-color: #fff;  /* Fondo */
+    color: #130b0b;  /* Color del texto */
+    padding: 10px;    /* Ajustamos el espacio interno */
+    border: 3px solid #797777;  /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
 }
 
 
