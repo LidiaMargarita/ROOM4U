@@ -54,11 +54,11 @@ header {
 /*---------------------------------------------------------------------------------------------*/
 /* Imagen decorativa */
 .login-image img {
-    width: auto; /* La imagen ocupará el ancho completo de su contenedor */
+    width: 250px; /* La imagen ocupará el ancho completo de su contenedor */
     height: 450px; /* La imagen ocupará toda la altura del contenedor */
     object-fit: cover;
-    margin-left: -4px; /* Mueve la imagen hacia la derecha */
-    border-top-left-radius: 10px;
+    margin-left: 105px; /* Mueve la imagen hacia la derecha */
+    border-radius: 10px 0 0 10px;
  }
 
 .login-image {
