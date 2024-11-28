@@ -49,17 +49,28 @@ header {
     align-items: flex-start; /* Ambos elementos tendrán la misma altura */
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
-    margin-top: 110px; /* Espacio de 2 cm desde la cabecera */
+    margin-top: 110px; /* Espacio de 2 cm desde la cabecera PARA BAJAR EL INICIO SESION*/
 }
 
 /* Imagen decorativa */
 .login-image img {
-    width: 350px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: -10px;
-    display: block; /* Asegura que sea un bloque */
-}
+    width: 100%; /* La imagen ocupará el ancho completo de su contenedor */
+    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+    margin: 0; /* Elimina márgenes extra */
+    padding: 0; /* Elimina relleno */
+    border-radius: 10px; /* Asegura que coincida con los bordes del cuadro gris */
+    }
+
+.login-image {
+    width: 350px; /* Mismo ancho que el cuadro gris */
+    height: 100%; /* La altura del cuadro gris */
+    margin: 0; /* Elimina márgenes extra */
+    padding: 0; /* Sin relleno */
+    display: flex;
+    justify-content: flex-end; /* Mueve la imagen hacia la derecha */
+    align-items: center; /* Asegura la alineación vertical */
+    }
 
 /* Contenedor del formulario */
 .login-form-container {
