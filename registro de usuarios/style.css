@@ -53,29 +53,30 @@ header {
 
 h1 {
     color: #131212;
-    font-size: 36px; /* Tamaño más grande para destacar */
+    font-size: 32px; /* Tamaño más grande para destacar */
     margin-bottom: 40px; /* Mayor separación del contenido */
     font-weight: bold;
     text-align: left;
-    margin-left: -250px;
-    margin-top: -50px;
+    margin-left: -250px;   /*para mover a la derecha la leyenda registro de usuario*/
+    margin-top: -50px;  /*para mover hacia arriba la leyenda registro de usuario*/
 }
 
 /* Contenedor de los botones */
 .button-container {
     display: flex;
     flex-direction: column; /* Botones uno encima del otro */
-    gap: 20px; /* Espacio entre los botones */
+    gap: 50px; /* Espacio entre los botones */
     align-items: center;
+    margin-top: 90px;   /*para mover hacia abajo los botones*/
 }
 
 /* Botón Estudiante y Propietario */
 button {
-    background-color: #59e259; /* Verde brillante */
+    background-color: #8af74c; /* Verde brillante */
     color: rgb(17, 15, 15);
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 25px 50px;
     border: none;
     border-radius: 30px; /* Bordes más redondeados */
     cursor: pointer;
@@ -85,11 +86,11 @@ button {
 }
 
 button:hover {
-    background-color: #59e259; /* Verde más oscuro al pasar el mouse */
+    background-color: #8af74c; /* Verde más oscuro al pasar el mouse */
 }
 
 /* Ajustes para el texto dentro de los botones */
 button:focus {
     outline: none;
-    box-shadow: 0px 0px 5px 2px #28A428; /* Enfoque al presionar */
+    box-shadow: 0px 0px 5px 2px #8af74c; /* Enfoque al presionar */
 }
