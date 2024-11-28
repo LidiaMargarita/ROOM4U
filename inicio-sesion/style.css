@@ -51,30 +51,28 @@ header {
     gap: 0; /* Sin espacio entre elementos */
     margin-top: 110px; /* Espacio de 2 cm desde la cabecera PARA BAJAR EL INICIO SESION*/
 }
-
+/*---------------------------------------------------------------------------------------------*/
 /* Imagen decorativa */
 .login-image img {
-    width: 100%; /* La imagen ocupará el ancho completo de su contenedor */
-    height: 100%; /* La imagen ocupará toda la altura del contenedor */
-    object-fit: cover; /* Ajusta la imagen para que no se deforme */
-    margin: 0; /* Elimina márgenes extra */
-    padding: 0; /* Elimina relleno */
-    border-radius: 10px; /* Asegura que coincida con los bordes del cuadro gris */
-    }
+    width: auto; /* La imagen ocupará el ancho completo de su contenedor */
+    height: 450px; /* La imagen ocupará toda la altura del contenedor */
+    object-fit: cover;
+    margin-left: -4px; /* Mueve la imagen hacia la derecha */
+    border-top-left-radius: 10px;
+ }
 
 .login-image {
+   position: relative;
     width: 350px; /* Mismo ancho que el cuadro gris */
-    height: 100%; /* La altura del cuadro gris */
-    margin: 0; /* Elimina márgenes extra */
-    padding: 0; /* Sin relleno */
-    display: flex;
-    justify-content: flex-end; /* Mueve la imagen hacia la derecha */
-    align-items: center; /* Asegura la alineación vertical */
-    }
-
+    height: 100%; /* Ajusta automáticamente la altura */
+    margin: 0;
+    padding: 0;
+ }
+/*-----------------------------------------------------------------------------------------------*/
 /* Contenedor del formulario */
 .login-form-container {
-    margin-top: -10px;
+    height: 450px;
+    margin-top: -0px;   /*Pegue la imagen para que quede igual que el cuadro gris*/
     background-color: #c5bdbd; /* Fondo más limpio y claro */
     padding: 30px;
     border: 1px solid #c5bdbd;
