@@ -50,14 +50,15 @@ header {
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
     margin-top: 110px; /* Espacio de 2 cm desde la cabecera PARA BAJAR EL INICIO SESION*/
+    margin-left: -60px;
 }
 /*---------------------------------------------------------------------------------------------*/
-/* Imagen decorativa */
+/* Imagen decorativa inicio de sesion*/
 .login-image img {
-    width: 250px; /* La imagen ocupará el ancho completo de su contenedor */
-    height: 450px; /* La imagen ocupará toda la altura del contenedor */
+    width: 260px; /* La imagen ocupará el ancho completo de su contenedor */
+    height: 460px; /* La imagen ocupará toda la altura del contenedor */
     object-fit: cover;
-    margin-left: 105px; /* Mueve la imagen hacia la derecha */
+    margin-left: 104px; /* Mueve la imagen hacia la derecha */
     border-radius: 10px 0 0 10px;
  }
 
@@ -71,7 +72,7 @@ header {
 /*-----------------------------------------------------------------------------------------------*/
 /* Contenedor del formulario */
 .login-form-container {
-    height: 450px;
+    height: 460px;
     margin-top: -0px;   /*Pegue la imagen para que quede igual que el cuadro gris*/
     background-color: #c5bdbd; /* Fondo más limpio y claro */
     padding: 30px;
@@ -86,14 +87,15 @@ header {
 
 /* Títulos del formulario */
 .form-header h2 {
-    font-size: 28px; /* Ajusta el tamaño del título */
-    color: #333;
+    font-size: 30px; /* Ajusta el tamaño del título */
+    margin-top: -10px;
+    color: #070707;
     text-align: center;
 }
 
 .form-header p {
-    font-size: 18px;
-    color: #666;
+    font-size: 25px;
+    color: #504f4f;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -126,17 +128,18 @@ header {
 
 /* Botón de iniciar sesión */
 .login-button {
-    width: 100%;
+    width: 60%;
     padding: 15px;
     border: none;
     border-radius: 25px;
     background-color: #6d6dff;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px; /* Tamaño más grande */
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px; /* Espaciado del resto del formulario */
+    margin-top: 10px; /* Espaciado del resto del formulario */
     margin-bottom: 15px;
+    margin-left: 58px;
 }
 
 .login-button:hover {
@@ -148,6 +151,7 @@ header {
     text-align: left; /* Ajuste alineado a la izquierda */
     font-size: 14px;
     color: #000;
+    margin-top: -4px;
 }
 
 .links a {
