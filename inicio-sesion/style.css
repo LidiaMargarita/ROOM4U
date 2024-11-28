@@ -42,14 +42,14 @@ header {
     width: 26px;
     border-radius: 2px;
 }
-
+/*--------------------------------------------------------------------------------------------*/
 /* Contenedor principal */
 .main-container {
     display: flex;
-    align-items: stretch; /* Ambos elementos tendrán la misma altura */
+    align-items: flex-start; /* Ambos elementos tendrán la misma altura */
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
-    margin-top: 30px; /* Espacio de 2 cm desde la cabecera */
+    margin-top: 50px; /* Espacio de 2 cm desde la cabecera */
 }
 
 /* Imagen decorativa */
@@ -57,13 +57,13 @@ header {
     width: 350px;
     height: auto;
     border-radius: 10px;
-    margin: 0; /* Elimina márgenes */
-    padding: 0;
+    margin-bottom: -10px;
     display: block; /* Asegura que sea un bloque */
 }
 
 /* Contenedor del formulario */
 .login-form-container {
+    margin-top: -10px;
     background-color: #c5bdbd; /* Fondo más limpio y claro */
     padding: 30px;
     border: 1px solid #c5bdbd;
