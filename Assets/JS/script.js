@@ -1,3 +1,5 @@
+
+/*---------------------------------------------------------------------------------------------*/
 // Este código busca el cuadro donde haces clic para abrir la ventana de buscar inmueble.
 const barraBusqueda = document.getElementById("barraBusqueda");
 // Este busca la ventana que aparece cuando haces clic en la barra de búsqueda.
