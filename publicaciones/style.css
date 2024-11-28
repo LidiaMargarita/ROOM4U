@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5d10d;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu h1 {
+    font-size: 20px;
+    color: #000;
+}
+
+.menu-iconos {
+    display: flex;
+    align-items: center;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    background-color: #000;
+    height: 3px;
+    width: 20px;
+    margin: 3px 0;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Contenedor de publicaciones */
+.publicaciones-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de publicación */
+.publicacion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+    background-color: #b2f5b2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.descripcion {
+    flex: 1;
+}
+
+.descripcion p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Botones */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalles {
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.favorito {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: red;
+    cursor: pointer;
+}
