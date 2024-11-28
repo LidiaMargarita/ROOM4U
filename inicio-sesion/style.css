@@ -49,7 +49,7 @@ header {
     align-items: flex-start; /* Ambos elementos tendrán la misma altura */
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
-    margin-top: 170px; /* Espacio de 2 cm desde la cabecera */
+    margin-top: 110px; /* Espacio de 2 cm desde la cabecera */
 }
 
 /* Imagen decorativa */
