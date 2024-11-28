@@ -12,18 +12,20 @@ body {
 
 /* Cabecera */
 header {
-    background-color: #FFD700; /* Amarillo brillante */
+    background-color: #f5d10d; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 70px; /* Ajustar la altura de la cabecera */
+    height: 75px; /* Ajustar la altura */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 180px; /* Igual que en la página principal */
-    object-fit: contain; /* Mantener proporciones */
+    height: 333px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+    margin-top: 18px;
+    margin-left: -190px;
 }
 
 /* Menú hamburguesa */
@@ -36,40 +38,11 @@ header {
 
 .menu-hamburguesa span {
     background-color: #000;
-    height: 3px;
-    width: 25px;
+    height: 4px;
+    width: 26px;
     border-radius: 2px;
 }
-
-/* Menú desplegable */
-.menu-desplegable {
-    list-style: none;
-    background-color: #fff; /* Fondo blanco */
-    border: 1px solid #ddd; /* Borde gris claro */
-    border-radius: 5px;
-    display: none; /* Inicialmente oculto */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 70px; /* Debajo de la cabecera */
-    right: 20px; /* Pegado al lado derecho */
-    z-index: 100; /* Asegura que quede encima de otros elementos */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    padding: 10px 0;
-}
-
-.menu-desplegable li {
-    padding: 10px 20px; /* Espaciado interno */
-}
-
-.menu-desplegable a {
-    text-decoration: none; /* Quitar subrayado */
-    color: #333; /* Texto gris oscuro */
-}
-
-.menu-desplegable a:hover {
-    background-color: #FFD700; /* Fondo amarillo brillante al pasar el mouse */
-    color: #fff; /* Texto blanco */
-}
-
+/*--------------------------------------------------------------------------------------------*/
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
