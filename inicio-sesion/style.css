@@ -46,7 +46,7 @@ header {
 /* Contenedor principal */
 .main-container {
     display: flex;
-    align-items: flex-start; /* Ambos elementos tendrán la misma altura */
+    align-items: stretch; /* Ambos elementos tendrán la misma altura */
     justify-content: center; /* Centrar horizontalmente */
     gap: 0; /* Sin espacio entre elementos */
     margin-top: 110px; /* Espacio de 2 cm desde la cabecera PARA BAJAR EL INICIO SESION*/
