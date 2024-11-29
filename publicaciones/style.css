@@ -44,66 +44,72 @@ header {
 }
 /*--------------------------------------------------------------------------------------------*/
 /* Contenedor de publicaciones */
+/* Contenedor principal de publicaciones */
 .publicaciones-contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre publicaciones */
+    padding: 20px; /* Espaciado interno */
+    justify-items: center; /* Centrar publicaciones */
 }
 
-/* Tarjeta de publicación */
+/* Cada publicación */
 .publicacion {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    padding: 10px;
+    flex-direction: column;
     align-items: center;
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    width: 250px; /* Ancho fijo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.imagen {
-    width: 100px;
-    height: 100px;
-    background-color: #b2f5b2;
-    border-radius: 5px;
+/* Imagen dentro de la publicación */
+.publicacion .imagen {
+    background-color: #8be68b; /* Fondo verde (temporal) */
+    width: 100%;
+    height: 150px; /* Altura fija */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    color: white; /* Texto blanco */
     font-weight: bold;
-    margin-right: 10px;
 }
 
-.descripcion {
-    flex: 1;
+/* Descripción de la publicación */
+.publicacion .descripcion {
+    text-align: center;
+    font-size: 14px; /* Tamaño de letra */
+    margin-bottom: 10px; /* Espacio debajo de la descripción */
 }
 
-.descripcion p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-/* Botones */
-.acciones {
+/* Botones de acciones */
+.publicacion .acciones {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-between; /* Espacio entre los botones */
+    width: 100%; /* Los botones ocupan todo el ancho */
 }
 
+/* Botón de detalles */
 .detalles {
-    padding: 5px 10px;
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12px;
+    background-color: #f5d10d; /* Amarillo */
+    border: none;
+    padding: 8px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño de letra */
     cursor: pointer;
+    color: black; /* Texto negro */
 }
 
+/* Botón de favoritos */
 .favorito {
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: red;
-    cursor: pointer;
+    background: none; /* Fondo transparente */
+    border: none; /* Sin borde */
+    font-size: 20px; /* Tamaño del corazón */
+    color: red; /* Corazón rojo */
+    cursor: pointer; /* Cursor de mano */
 }

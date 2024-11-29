@@ -45,11 +45,10 @@
                 <option value="Cuarto">Cuarto</option>
             </select>
 
-            <!-- Ubicación -->
-            <fieldset>
+            <!-- Ubicación -->       
                 <label for="Ubicación" class="campo-titulo">Ubicación:</label>
                 <div id="ubicacion">
-                    <div style="margin-top: 10px;"> <!-- Contenedor para los campos de ubicación -->
+                    <div style="margin-top: -10px;"> <!-- Contenedor para los campos de ubicación -->
                         <input type="text" placeholder="Calle">
                         <input type="text" placeholder="Número Exterior">
                         <input type="text" placeholder="Número Interior (opcional)">
@@ -59,7 +58,7 @@
                         <input type="text" placeholder="Código Postal">
                     </div>
                 </div>
-
+                <div style="margin-top: -30px;"> <!-- Otro contenedor para subir el cuadro de seleción -->
                 <select id="delegacion" required>
                     <option value="">Selecciona tu delegación</option>
                     <option value="Álvaro Obregón">Álvaro Obregón</option>
@@ -82,15 +81,22 @@
             </fieldset>
 
             <!-- Descripción -->
+            
+            <div style="margin-top: 20px;"> <!-- Otro contenedor para bajar el cuadro de seleción -->
             <label for="descripcion" class="campo-titulo">Descripción:</label>
+            <div style="margin-top: 5px;"> <!-- Otro contenedor para espacio -->
             <textarea id="descripcion" class="campo-input" maxlength="200" placeholder="Máximo 200 caracteres" required></textarea>
 
             <!-- Precio -->
+            <div style="margin-top: 10px;"> <!-- Otro contenedor para bajar el cuadro de seleción-->
             <label for="precio" class="campo-titulo">Ingresa el monto del inmueble:</label>
+            <div style="margin-top: 5px;"> <!-- Otro contenedor para espacio -->
             <input type="text" id="precio" class="campo-input" placeholder="Precio mensual en pesos mexicanos" required>
 
             <!-- Subir Fotos -->
+            <div style="margin-top: 10px;"> <!-- Otro contenedor para bajar el cuadro de seleción-->
             <label for="fotos" class="campo-titulo">Subir Fotos (mínimo 5, máximo 10):</label>
+            
             <input type="file" id="fotos" class="campo-input" accept=".jpg" multiple required>
 
             <!-- Botón Subir -->

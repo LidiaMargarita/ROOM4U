@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Inmueble</title>
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+    <link rel="stylesheet" href="../detalles-inmuebles/style.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <a href="../index.html">
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
+        </a>
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
+    </header>
+<!-- Título -->
+<h1 class="titulo-detalles">Detalles del Inmueble</h1>
+
+    <!-- Contenido Principal -->
+    <main>
+    
+      <!-- Galería de fotos -->
+      <section class="galeria">
+        <div class="foto">FOTO</div>
+        <div class="foto">FOTO</div>
+        <div class="foto">FOTO</div>
+        <div class="foto">FOTO</div>
+    </section>
+<!-- Información del inmueble -->
+<section class="informacion">
+    <h2>Información del Inmueble</h2>
+    <p><strong>Ubicación:</strong> Departamento Renta Lomas de Tetelpan, Calz. Desierto de los Leones</p>
+    <p><strong>Descripción:</strong> Excelente departamento, iluminado, amplios espacios con persianas todo el departamento, recién pintado, excelentes condiciones, vistas agradables. Muy acogedor, está como a 10 min. de Periférico.</p>
+    <p><strong>Precio:</strong> $7,000 MXN</p>
+</section>
+
+<!--CALIFICACION-->
+<section class="calificacion">
+    <h2>Calificación</h2>
+    <div class="estrellas" id="estrellas">
+        <span data-value="1">&#9734;</span>
+        <span data-value="2">&#9734;</span>
+        <span data-value="3">&#9734;</span>
+        <span data-value="4">&#9734;</span>
+        <span data-value="5">&#9734;</span>
+    </div>
+</section>
+ <!--CALIFICACION-->       
+ <section class="comentarios">
+    <h3>Comentarios</h3>
+    <div id="areaComentarios">
+        <button id="botonComentar" class="comentar">Comentar</button>
+        <textarea id="comentario" placeholder="Escribe tu comentario aquí..." disabled></textarea>
+        <button id="botonPublicar" class="publicar" disabled>Publicar</button>
+    </div>
+    <ul id="listaComentarios">
+        <!-- Los comentarios se agregarán dinámicamente aquí -->
+    </ul>
+</section>    
+  
+    </main>
+
+    <!-- Vincular JS -->
+    <script src="../Assets/JS/menu/menu.js" defer></script>
+    <script src="../detalles-inmuebles/script.js" defer></script>
+</body>
+</html>

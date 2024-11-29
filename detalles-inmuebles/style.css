@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Cabecera */
+header {
+    background-color: #f5d10d; /* Amarillo brillante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 75px; /* Ajustar la altura */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 333px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+    margin-top: 18px;
+    margin-left: -190px;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    background-color: #000;
+    height: 4px;
+    width: 26px;
+    border-radius: 2px;
+}
+/*--------------------------------------------------------------------------------------------*/
+/* Detalles del inmueble */
+/* Título */
+.titulo-detalles {
+    text-align: left; /* Alineado a la izquierda */
+    font-size: 28px; /* Tamaño del título */
+    font-weight: bold;
+    margin: 30px 20px 10px 20px; /* Ajusta el margen para mover el título */
+    color: #333; /* Color del título */
+}
+
+/* Galería de fotos */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 15px;
+    margin: 20px; /* Espaciado general */
+}
+
+.galeria .foto {
+    background-color: #8be68b; /* Fondo provisional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Altura de cada foto */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Información del inmueble */
+.informacion {
+    background: #fff;
+    padding: 20px;
+    margin: 20px; /* Margen para separar de otras secciones */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.informacion h2 {
+    font-size: 20px; /* Tamaño del subtítulo */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.informacion p {
+    margin-bottom: 10px;
+}
+
+/* Botón de contactar */
+.contactar {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
+/* Calificación */
+.calificacion {
+    margin: 20px;
+}
+
+.calificacion h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.estrellas {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    color: #ccc; /* Color gris inicial */
+    cursor: pointer;
+}
+
+.estrellas span:hover,
+.estrellas span:hover ~ span {
+    color: #ffcc00; /* Color amarillo al pasar el mouse */
+}
+
+.estrellas span.active {
+    color: #ffcc00; /* Color amarillo si está seleccionado */
+}
+
+/* Comentarios */
+.comentarios {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    border: 1px solid #ccc;
+}
+
+.comentar,
+.publicar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.comentar {
+    background-color: #ff4c4c; /* Botón Comentar en rojo */
+}
+
+.publicar:disabled {
+    background-color: #ccc; /* Botón deshabilitado */
+    cursor: not-allowed;
+}
+
+/* Lista de comentarios */
+#listaComentarios {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}

@@ -7,26 +7,28 @@
 
 body {
     font-family: 'ADLaM Display', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Fondo claro */
 }
 
 /* Cabecera */
 header {
-    background-color: #FFD700;
+    background-color: #f5d10d; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 70px;
+    height: 75px; /* Ajustar la altura */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    height: 180px;
+    height: 333px; /* Tamaño ajustado del logo */
     object-fit: contain;
+    margin-top: 18px;
+    margin-left: -190px;
 }
 
-/*menu hamburguesa*/
+/* Menú hamburguesa */
 .menu-hamburguesa {
     display: flex;
     flex-direction: column;
@@ -36,64 +38,65 @@ header {
 
 .menu-hamburguesa span {
     background-color: #000;
-    height: 3px;
-    width: 25px;
+    height: 4px;
+    width: 26px;
     border-radius: 2px;
 }
-
-.menu-desplegable {
-    display: none;
-    position: absolute;
-    top: 70px; /* Ajusta según la altura de tu cabecera */
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-}
-
-.menu-desplegable li {
-    padding: 10px 20px;
-}
-
-.menu-desplegable li a {
-    text-decoration: none;
-    color: #333;
-}
-
-
+/*--------------------------------------------------------------------------------------------*/
 /* Contenedor principal */
 .main-container {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 h1 {
     font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    color: #0c0b0b;
+    margin-bottom: 10px;
+    margin-left: -1050px;
 }
 
 /* Lista de inmuebles */
 .inmuebles-lista {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Espaciado entre botones */
 }
 
+/* Botón de cada inmueble */
 .inmueble-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineación izquierda del contenido */
     background-color: #D3D3F3;
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     padding: 15px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: left;
+    gap: 5px;
 }
 
 .inmueble-boton:hover {
     background-color: #B0B0E5;
+}
+
+/* Texto del botón */
+.inmueble-boton strong {
+    font-size: 18px; /* Título del inmueble */
+    color: #333;
+}
+
+.inmueble-boton span {
+    font-size: 14px; /* Dirección y precio */
+    color: #666;
 }

@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Publicar Inmueble</title>
+    <title>Publicaciones disponibles</title>
     <!-- Vincular CSS -->
-    <link rel="stylesheet" href="../publicar/style.css">
+    <link rel="stylesheet" href="../publicaciones/style.css">
     <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
-
 </head>
 <body>
     <!-- Cabecera -->
@@ -31,34 +30,20 @@
             <li><a href="../favoritos/index.html">Favoritos</a></li>
         </ul>
     </header>
+
     <!-- Contenedor principal -->
-        <h2>Publicaciones</h2>
+    <main>
+        <h2>Publicaciones Disponibles</h2>
         <section class="publicaciones-contenedor">
-            <!-- Tarjetas de publicaciones -->
-            <div class="publicacion">
-                <div class="imagen">FOTO</div>
-                <div class="descripcion">
-                    <p>Hermoso Departamento Semi Nuevo en Colonia Lerma</p>
-                    <div class="acciones">
-                        <button class="detalles">Detalles</button>
-                        <button class="favorito">&#10084;</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="publicacion">
-                <div class="imagen">FOTO</div>
-                <div class="descripcion">
-                    <p>Cuarto en Renta para estudiantes cerca de ESIME</p>
-                    <div class="acciones">
-                        <button class="detalles">Detalles</button>
-                        <button class="favorito">&#10084;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Repite esta estructura por cada publicación -->
+            <!-- Aquí se llenarán las publicaciones desde JS -->
         </section>
     </main>
+        </section>
+    </main>
+
+<!-- Vincular JS -->
+<script src="../../Assets/JS/menu/menu.js" defer></script>
+<script src="../publicaciones/script.js" defer></script>
+
 </body>
 </html>
