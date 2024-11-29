@@ -52,7 +52,7 @@ header {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/*leyenda */
+/*leyenda de publicar inmueble*/
 h1 {
     text-align: left;
     font-size: 24px;
@@ -61,14 +61,7 @@ h1 {
     margin-left: -340px;
     margin-top: -50px;
 }
-h2{
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #0c0c0c;
-    margin-left: -340px;
-    margin-top: -50px;
-}
+
 
 /* Formulario */
 form {
@@ -84,6 +77,25 @@ label {
     color: #070708;    
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+/* Contenedor para los campos de ubicación */
+#ubicacion {
+    margin-bottom: 20px; /* Espaciado inferior entre "Ubicación" y los campos */
+}
+
+/* Espaciado para los grupos de campos */
+#ubicacion div {
+    display: flex;
+    gap: 10px; /* Espaciado entre cada input */
+}
+
+/* inputs tengan el mismo tamaño */
+#ubicacion input {
+    flex: 1; /* Hace que los inputs ocupen el mismo ancho */
+    padding: 10px;
+    border: 1px solid #773434;
+    border-radius: 5px;
 }
 
 /*cuadro para llenar el formulario*/

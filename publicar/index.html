@@ -47,21 +47,18 @@
 
             <!-- Ubicación -->
             <fieldset>
-                <h2>Ubicación:</h2>
-                <label for="calle">Calle:</label>
-                <input type="text" id="calle" placeholder="Calle" maxlength="50" required>
-
-                <label for="numeroExterior">Número Exterior:</label>
-                <input type="text" id="numeroExterior" placeholder="Número Exterior" maxlength="50" required>
-
-                <label for="numeroInterior">Numero Interior</label>
-                <input type="text" id="numeroInterior" placeholder="Número Interior (opcional)" maxlength="50">
-
-                <label for="colonia">Colonia</label>
-                <input type="text" id="colonia" placeholder="Colonia" maxlength="50" required>
-
-                <label for="codigoPostal">Código Postal</label>
-                <input type="text" id="codigoPostal" placeholder="Código Postal" maxlength="5" required>
+                <label for="Ubicación" class="campo-titulo">Ubicación:</label>
+                <div id="ubicacion">
+                    <div style="margin-top: 10px;"> <!-- Contenedor para los campos de ubicación -->
+                        <input type="text" placeholder="Calle">
+                        <input type="text" placeholder="Número Exterior">
+                        <input type="text" placeholder="Número Interior (opcional)">
+                    </div>
+                    <div style="margin-top: 10px;"> <!-- Otro contenedor para Colonia y Código Postal -->
+                        <input type="text" placeholder="Colonia">
+                        <input type="text" placeholder="Código Postal">
+                    </div>
+                </div>
 
                 <select id="delegacion" required>
                     <option value="">Selecciona tu delegación</option>
