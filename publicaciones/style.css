@@ -6,56 +6,43 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
+    font-family: 'ADLaM Display', sans-serif;
+    background-color: #f9f9f9; /* Fondo claro */
 }
 
+/* Cabecera */
 header {
+    background-color: #f5d10d; /* Amarillo brillante */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f5d10d;
     padding: 10px 20px;
+    height: 75px; /* Ajustar la altura */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu {
+.logo {
+    height: 333px; /* Tamaño ajustado del logo */
+    object-fit: contain;
+    margin-top: 18px;
+    margin-left: -190px;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.menu h1 {
-    font-size: 20px;
-    color: #000;
-}
-
-.menu-iconos {
-    display: flex;
-    align-items: center;
-}
-
-.icono {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .menu-hamburguesa span {
-    display: block;
     background-color: #000;
-    height: 3px;
-    width: 20px;
-    margin: 3px 0;
+    height: 4px;
+    width: 26px;
+    border-radius: 2px;
 }
-
-h2 {
-    margin: 20px 0;
-    font-size: 24px;
-    color: #333;
-}
-
+/*--------------------------------------------------------------------------------------------*/
 /* Contenedor de publicaciones */
 .publicaciones-contenedor {
     display: grid;

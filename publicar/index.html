@@ -47,14 +47,24 @@
 
             <!-- Ubicación -->
             <fieldset>
-                <legend>Ubicación:</legend>
+                <h2>Ubicación:</h2>
+                <label for="calle">Calle:</label>
                 <input type="text" id="calle" placeholder="Calle" maxlength="50" required>
+
+                <label for="numeroExterior">Número Exterior:</label>
                 <input type="text" id="numeroExterior" placeholder="Número Exterior" maxlength="50" required>
+
+                <label for="numeroInterior">Numero Interior</label>
                 <input type="text" id="numeroInterior" placeholder="Número Interior (opcional)" maxlength="50">
+
+                <label for="colonia">Colonia</label>
                 <input type="text" id="colonia" placeholder="Colonia" maxlength="50" required>
+
+                <label for="codigoPostal">Código Postal</label>
                 <input type="text" id="codigoPostal" placeholder="Código Postal" maxlength="5" required>
+
                 <select id="delegacion" required>
-                    <option value="">Selecciona una delegación</option>
+                    <option value="">Selecciona tu delegación</option>
                     <option value="Álvaro Obregón">Álvaro Obregón</option>
                     <option value="Gustavo A. Madero">Gustavo A. Madero</option>
                     <option value="Tláhuac">Tláhuac</option>

@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicaciones - Room4U</title>
-    <link rel="stylesheet" href="../Assets/CSS/publicaciones.css">
+    
+    <title>Publicar Inmueble</title>
+    <!-- Vincular CSS -->
+    <link rel="stylesheet" href="../publicar/style.css">
+    <link rel="stylesheet" href="../Assets/CSS/menudesplegable/styles.css">
+
 </head>
 <body>
+    <!-- Cabecera -->
     <header>
-        <div class="menu">
-            <h1>Tema principal</h1>
-            <div class="menu-iconos">
-                <img src="../Assets/IMG/bell.png" alt="Notificaciones" class="icono">
-                <div class="menu-hamburguesa">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        <!-- El logo redirige a la página principal -->
+        <a href="../index.html">
+       <!-- Logoroom4u -->
+            <img src="../Assets/IMG/logo.png" alt="Room4U Logo" class="logo">    
+        </a>
+     <!-- Menú hamburguesa -->       
+        <div class="menu-hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+     <!-- Menú desplegable -->    
+        <ul class="menu-desplegable" id="menu">
+            <li><a href="../inicio-sesion/index.html">Iniciar sesión</a></li>
+            <li><a href="../publicar/index.html">Publicar</a></li>
+            <li><a href="../favoritos/index.html">Favoritos</a></li>
+        </ul>
     </header>
-    <main>
+    <!-- Contenedor principal -->
         <h2>Publicaciones</h2>
         <section class="publicaciones-contenedor">
             <!-- Tarjetas de publicaciones -->
