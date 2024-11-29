@@ -47,30 +47,49 @@ header {
 /* Título */
 .titulo-detalles {
     text-align: left; /* Alineado a la izquierda */
-    font-size: 28px; /* Tamaño del título */
+    font-size: 24px; /* Tamaño del título */
     font-weight: bold;
-    margin: 30px 20px 10px 20px; /* Ajusta el margen para mover el título */
-    color: #333; /* Color del título */
+    margin: 20px 20px 10px 20px; /* Ajusta el margen para mover el título */
+    color: #0a0606; /* Color del título */
 }
 
 /* Galería de fotos */
+/* Galería */
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 15px;
-    margin: 20px; /* Espaciado general */
+    display: flex; /* Usamos flexbox para organizar las columnas */
+    gap: 20px; /* Sin espacio extra entre columnas */
+    justify-content: flex-start; /* Separa las columnas horizontalmente */
+    position: relative;
+   
 }
 
-.galeria .foto {
-    background-color: #8be68b; /* Fondo provisional */
+/* Columnas */
+.columna {
+    display: flex;
+    flex-direction: column; /* Las fotos se apilan verticalmente dentro de cada columna */
+    gap: 5px; /* Espacio entre fotos dentro de la columna */
+
+}
+
+/* Mover manualmente las columnas */
+.columna:first-child {
+    margin-right: 150px; /* Ajusta para mover la primera columna hacia la derecha */
+}
+
+.columna:last-child {
+    margin-left: 80px; /* Ajusta para mover la segunda columna hacia la izquierda */
+}
+
+/* Fotos */
+.foto {
+    background-color: #8be68b;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px; /* Altura de cada foto */
+    height: 150px; /* Altura de las fotos */
+    width: 150px; /* Ancho de las fotos */
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 /* Información del inmueble */
 .informacion {
     background: #fff;
@@ -119,7 +138,7 @@ header {
     display: flex;
     gap: 5px;
     font-size: 24px;
-    color: #ccc; /* Color gris inicial */
+    color: #888080; /* Color gris inicial */
     cursor: pointer;
 }
 
