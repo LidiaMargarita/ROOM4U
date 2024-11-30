@@ -28,6 +28,8 @@ estrellas.forEach((estrella, index) => {
     });
 });
 
+
+
 // Función para habilitar el área de comentarios
 botonComentar.addEventListener('click', () => {
     comentarioInput.disabled = false;

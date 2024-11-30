@@ -47,7 +47,7 @@ header {
 /* Título */
 .titulo-detalles {
     text-align: left; /* Alineado a la izquierda */
-    font-size: 2px; /* Tamaño del título */
+    font-size: 20px; /* Tamaño del título */
     font-weight: bold;
     margin: 20px 10px 10px 40px; /* Ajusta el margen para mover el título */
     color: #0a0606; /* Color del título */
@@ -87,7 +87,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 150px; /* Tamaño de las fotos */
-    width: 290px;
+    width: 340px;
     border-radius: 8px;
 }
 /* Información del inmueble */
@@ -119,17 +119,23 @@ header {
 
 /* Botón de contactar */
 .contactar {
-    margin-top: 20px;
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    margin-top: 10px;
+    background-color: #ff0000;
+    color: rgb(247, 247, 247);
+    padding: 13px 26px;
+    border: 2px;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     display: block;
     font-weight: bold;
 }
+    .contactar{
+        position: relative;
+        top: 0;
+        left: 500px;
+    }
+
 
 /* Calificación */
 .calificacion {
@@ -150,67 +156,97 @@ header {
     display: flex;
     gap: 5px;
     font-size: 35px;     /*TAMAÑO DE LAS ESTRELLAS*/
-    color: #000000; /* Color gris inicial */
+    color: #c2a5a5; /* Color gris inicial */
     cursor: pointer;
 }
 
 .estrellas span:hover,
 .estrellas span:hover ~ span {
-    color: #054683; /* Color amarillo al pasar el mouse */
+    color: #01080f; /* Color amarillo al pasar el mouse */
 }
 
 .estrellas span.active {
-    color: #00ffdd; /* Color amarillo si está seleccionado */
+    color: #e5ff00; /* Color amarillo si está seleccionado */
 }
 
 /* Comentarios */
+/* Contenedor general de comentarios */
+/* Contenedor para los comentarios */
 .comentarios {
-    margin: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegura que los elementos hijos sean posicionables */
+    top: -600px; /* Ajusta el valor para subir todo el bloque */
+    left: 70px;
 }
 
+/* Leyenda "Comentarios" */
 .comentarios h3 {
     font-size: 20px;
-    color: #030202;
-    margin-bottom: 10px;
+    color: #333;
+    position: absolute; /* Posiciona libremente */
+    top: 55px; /* Ajusta manualmente la altura */
+    left: 800px; /* Ajusta la posición horizontal a la derecha */
+    margin: 0; /* Elimina márgenes conflictivos */
 }
 
-textarea {
-    width: 100%;
-    margin: 10px 0;
+/* Lista de comentarios ya publicados */
+#listaComentarios {
+    list-style: none; /* Quita las viñetas */
+    position: absolute;
+    top: 100px; /* Ajusta debajo del título */
+    left: 800px; /* Ajusta la posición horizontal */
+    width: 300px; /* Controla el ancho del contenedor */
+    max-height: 150px; /* Altura máxima para scroll */
+    overflow-y: auto; /* Scroll si hay muchos comentarios */
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada comentario individual */
+#listaComentarios li {
+    background: #f1f1f1; /* Fondo del comentario */
     padding: 10px;
-    border-radius: 5px;
-    resize: none;
-    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Espacio entre comentarios */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px;
+    color: #333;
 }
 
-.comentar,
-.publicar {
-    background-color: #007bff;
+/* Botón Comentar */
+#botonComentar {
+    background-color: #f86558; /* Rojo claro */
     color: white;
+    position: absolute;
+    top: 270px; /* Ajusta manualmente debajo de los comentarios */
+    left: 800px; /* Alinea con los comentarios */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-.comentar {
-    background-color: #ff4c4c; /* Botón Comentar en rojo */
+/* Área de texto para comentarios */
+textarea {
+    width: 300px; /* Ajusta el ancho del área */
+    position: absolute;
+    top: 330px; /* Espacio debajo del botón "Comentar" */
+    left: 800px; /* Alinea con los comentarios */
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    border: 1px solid #ccc; /* Borde gris */
 }
 
-.publicar:disabled {
-    background-color: #ccc; /* Botón deshabilitado */
-    cursor: not-allowed;
-}
-
-/* Lista de comentarios */
-#listaComentarios {
-    list-style-type: none;
-    margin-top: 20px;
-    padding: 0;
+/* Botón Publicar */
+#botonPublicar {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    position: absolute;
+    top: 390px; /* Espacio debajo del área de texto */
+    left: 800px; /* Alinea con los comentarios */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
