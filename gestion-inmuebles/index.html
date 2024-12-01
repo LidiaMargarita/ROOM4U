@@ -26,6 +26,11 @@
 
     <!-- Contenedor principal -->
     <main class="main-container">
+        <div class="buttons">
+            <button class="assign-client">Asignar Cliente</button>
+            <button class="status available">Disponible</button>
+            <button class="delete">Eliminar</button>
+        </div>
         <h1>Gestión de mi inmueble</h1>
 
         <!-- Fotos del inmueble -->
@@ -37,18 +42,11 @@
         </div>
 
         <!-- Detalles del inmueble -->
-        <div class="details">
-            <button class="edit-button" id="editInmueble">Editar inmueble</button>
-            <p><strong>Ubicación:</strong> <span id="ubicacion">[Ubicación del inmueble]</span></p>
-            <p><strong>Descripción:</strong> <span id="descripcion">[Descripción del inmueble]</span></p>
-            <p><strong>Renta:</strong> <span id="renta">[Precio del inmueble]</span></p>
-        </div>
-
-        <!-- Botones de acción -->
-        <div class="buttons">
-            <button class="assign-client">Asignar Cliente</button>
-            <button class="status available">Disponible</button>
-            <button class="delete">Eliminar</button>
+        <div class="info-text">
+            <button class="edit-button">Editar inmueble</button>
+            <p><strong>Ubicación:</strong> [Ubicación del inmueble]</p>
+            <p><strong>Descripción:</strong> [Descripción del inmueble]</p>
+            <p><strong>Renta:</strong>[Precio del inmueble]</p>
         </div>
 
         <button class="save">Guardar datos</button>

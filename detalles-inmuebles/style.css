@@ -151,24 +151,48 @@ header {
     margin-left: -19px;  /*mover +derecha y -izquierda*/
     
 }
-
+/* Estilo inicial de las estrellas */
+/* Estilo general de las estrellas */
+/* Contenedor de las estrellas */
 .estrellas {
     display: flex;
-    gap: 5px;
-    font-size: 35px;     /*TAMAÑO DE LAS ESTRELLAS*/
-    color: #c2a5a5; /* Color gris inicial */
+    justify-content: flex-start; /* Alinear las estrellas a la izquierda */
+    margin-top: 20px;
+}
+
+/* Estilo general para cada estrella */
+.estrella {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    background-color: #5f5c5c; /* Fondo gris inicial */
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    ); /* Forma de estrella */
     cursor: pointer;
+    transition: background-color 0.5s ease; /* Transición para el cambio de color */
 }
 
-.estrellas span:hover,
-.estrellas span:hover ~ span {
-    color: #01080f; /* Color amarillo al pasar el mouse */
+/* Estilo para la estrella al pasar el mouse */
+.estrella:hover,
+.estrella:hover ~ .estrella {
+    background-color: #f0cc01; /* Amarillo al pasar el mouse */
 }
 
-.estrellas span.active {
-    color: #e5ff00; /* Color amarillo si está seleccionado */
+/* Estilo para las estrellas seleccionadas */
+.estrella.active {
+    background-color: #dfbe05; /* Amarillo sólido cuando se selecciona */
 }
-
 /* Comentarios */
 /* Contenedor general de comentarios */
 /* Contenedor para los comentarios */

@@ -16,7 +16,7 @@
              <!-- Vincular CSS para que se conecte al menú desplegable -->
     <link rel="stylesheet" href="Assets/CSS/menudesplegable/styles.css">
      <!-- Vincular CSS para que se conecte a las notificaciones -->
-     <link rel="stylesheet" href="Assets/CSS/notificaciones/notificaciones.css">
+     <link rel="stylesheet" href="Assets/CSS/notificacion/style.css">
 </head>
 <body>
     <!-- Cabecera-->
@@ -25,6 +25,13 @@
         <a href="./index.html">
             <img src="Assets/IMG/logo.png" alt="Room4U Logo" class="logo">
         </a>
+
+        <!-- Campanita de notificaciones -->
+    <div class="notification-bell" id="notificationBell">
+        <img src="../ROOM4U/Assets/IMG/campanita.png" alt="Notificaciones" class="bell-icon">
+        <span class="notification-count" id="notificationCount">0</span>
+    </div>
+
         <!-- Menú hamburguesa -->
         <div class="menu-hamburguesa" id="menuToggle">
             <span></span> <!--Primera línea del menú-->
@@ -38,7 +45,13 @@
             <li><a href="./publicar/index.html">Publicar</a></li>
             <li><a href="./favoritos/index.html">Favoritos</a></li>
         </ul>
-    
+
+     <!-- Ventana de notificaciones -->
+    <div class="notifications-modal" id="notificationsModal">
+    <h2>Notificaciones</h2>
+    <ul id="notificationList"></ul>
+    </div>
+
     </header>
     <!-- Barra de búsqueda -->
     <main>
@@ -105,5 +118,6 @@
     <!-- Vincular JS para que haya funciones y sea interactivo en la página -->
     <script src="Assets/JS/script.js" defer></script>
     <script src="Assets/JS/menu/menu.js" defer></script>
+    <script src="Assets/JS/notificacion/noti.js" defer></script>
 </body>
 </html>

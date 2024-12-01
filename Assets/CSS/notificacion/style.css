@@ -1,0 +1,82 @@
+/* Campanita de notificaciones */
+    .notification-bell {
+        width: 30px; /* Cambia a un tamaño mayor */
+        height: 30px; /* Cambia a un tamaño mayor */
+        position: absolute;
+        right: 70px; /* Ajusta según tu diseño */
+        top: 20px; /* Ajusta según la cabecera */
+        cursor: pointer;
+    }
+
+.bell-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    display: none; /* Solo aparece si hay notificaciones */
+}
+
+/* Modal de notificaciones */
+.notifications-modal {
+    position: fixed;
+    top: 13%; /* Ajusta para alinear correctamente */
+    left: 99%; /* Cerca de la campanita */
+    transform: translate(-100%, -15%); /* Mejor posición */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: 1000; /* Asegura que esté encima */
+    padding: 15px; /* Espaciado interno */
+    max-width: 300px; /* Limitar ancho */
+    border: 1px solid black; /* Borde negro */
+    font-family: 'Arial', sans-serif; /* Fuente similar */
+    font-size: 14px; /* Tamaño de texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    display: none; /* Ocultar por defecto */
+}
+
+/* Listado de notificaciones */
+.notifications-modal ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.notifications-modal ul li {
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Separador entre notificaciones */
+}
+
+.notifications-modal ul li:last-child {
+    border-bottom: none; /* Sin separador en la última notificación */
+}
+
+/* Texto destacado */
+.notifications-modal strong {
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Contador de notificaciones (campanita) */
+.notification-count {
+    position: absolute;
+    top: -9px; /* Ajusta la posición vertical */
+    right: -5px; /* Ajusta la posición horizontal */
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    border-radius: 50%; /* Forma circular */
+    padding: 2px 6px; /* Tamaño del contador */
+    font-size: 12px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    display: none; /* Muestra solo si hay notificaciones */
+}

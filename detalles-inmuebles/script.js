@@ -1,30 +1,38 @@
 // Variables de elementos interactivos
-const estrellas = document.querySelectorAll('.estrellas span');
 const botonComentar = document.getElementById('botonComentar');
 const botonPublicar = document.getElementById('botonPublicar');
 const comentarioInput = document.getElementById('comentario');
 const listaComentarios = document.getElementById('listaComentarios');
 const botonContactar = document.querySelector('.contactar');
+const resultadoCalificacion = document.getElementById('resultadoCalificacion');
+const estrellas = document.querySelectorAll('.estrella');
+let calificacionGuardada = false;
 
-// Función para calificar usando estrellas
 estrellas.forEach((estrella, index) => {
     estrella.addEventListener('mouseover', () => {
-        estrellas.forEach((e, i) => {
-            e.style.color = i <= index ? '#ffcc00' : '#ccc'; // Cambia color
-        });
+        if (!calificacionGuardada) {
+            estrellas.forEach((e, i) => {
+                e.style.backgroundColor = i <= index ? '#ffd700' : '#ccc'; // Colorea temporalmente
+            });
+        }
     });
 
     estrella.addEventListener('click', () => {
-        estrellas.forEach((e, i) => {
-            e.classList.toggle('active', i <= index); // Marca como activo
-        });
-        alert('Calificaste con ${index + 1} estrellas.');
+        if (!calificacionGuardada) {
+            calificacionGuardada = true; // Bloquea cambios
+            estrellas.forEach((e, i) => {
+                e.classList.toggle('active', i <= index); // Marca como activo
+            });
+            alert('Calificaste');
+        }
     });
 
     estrella.addEventListener('mouseout', () => {
-        estrellas.forEach((e) => {
-            e.style.color = e.classList.contains('active') ? '#ffcc00' : '#ccc'; // Mantén activa la calificación
-        });
+        if (!calificacionGuardada) {
+            estrellas.forEach(e => {
+                e.style.backgroundColor = e.classList.contains('active') ? '#ffd700' : '#ccc'; // Restablece color
+            });
+        }
     });
 });
 
@@ -56,9 +64,9 @@ botonPublicar.addEventListener('click', () => {
     }
 });
 
-// Contactar (simulación de inicio de sesión)
+// Función para manejar el botón Contactar
 botonContactar.addEventListener('click', () => {
-    const usuarioAutenticado = false; // Simula si el usuario ha iniciado sesión
+    const usuarioAutenticado = true; // Cambia según la lógica de backend
 
     if (!usuarioAutenticado) {
         alert('Por favor, inicia sesión para contactar al propietario.');
