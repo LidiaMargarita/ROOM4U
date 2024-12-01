@@ -7,7 +7,7 @@ const botonContactar = document.querySelector('.contactar');
 const resultadoCalificacion = document.getElementById('resultadoCalificacion');
 const estrellas = document.querySelectorAll('.estrella');
 let calificacionGuardada = false;
-
+//funcion para las estrellas
 estrellas.forEach((estrella, index) => {
     estrella.addEventListener('mouseover', () => {
         if (!calificacionGuardada) {
