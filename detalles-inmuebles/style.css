@@ -7,7 +7,8 @@
 
 body {
     font-family: 'ADLaM Display', sans-serif;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #fafafa; /* Fondo claro */
+    overflow-x: hidden;
 }
 
 /* Cabecera */
@@ -52,7 +53,6 @@ header {
     margin: 20px 10px 10px 40px; /* Ajusta el margen para mover el título */
     color: #0a0606; /* Color del título */
 }
-
 
 /* Galería de fotos */
 /* Contenedor de la galería */
@@ -274,4 +274,30 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+}
+
+
+.boton-favorito {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    font-size: 25px; /* Tamaño del corazón */
+    color: #e65252; /* Color rojo del corazón */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre él */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+    margin-left: 630px;
+    top: 465px;
+ position: absolute;
+   
+}
+
+/* Efecto al pasar el mouse */
+.boton-favorito:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    color: #cc0000; /* Cambia el color a un rojo más oscuro */
+}
+
+/* Estado activo (cuando se guarda en favoritos) */
+.boton-favorito.active {
+    color: #cc0000; /* Cambia a verde cuando esté activo */
+    transform: scale(1.1); /* Ligero efecto visual */
 }

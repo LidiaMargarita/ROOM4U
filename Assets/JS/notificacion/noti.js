@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Simulando las notificaciones (esto vendría del backend)
     let notifications = [
         "Un propietario te ha asignado como cliente.",
-        "Un estudiante ha solicitado información de tu inmueble.",
+        
     ];
 
     // Actualizar la campanita

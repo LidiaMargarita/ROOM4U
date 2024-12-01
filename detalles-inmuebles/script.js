@@ -7,6 +7,26 @@ const botonContactar = document.querySelector('.contactar');
 const resultadoCalificacion = document.getElementById('resultadoCalificacion');
 const estrellas = document.querySelectorAll('.estrella');
 let calificacionGuardada = false;
+
+
+// Selecciona el botón de favorito
+const botonFavorito = document.getElementById('botonFavorito');
+
+// Agrega el evento de clic
+botonFavorito.addEventListener('click', () => {
+    // Alterna la clase "active" para cambiar el estilo
+    botonFavorito.classList.toggle('active');
+
+    // Verifica si está activo y muestra un mensaje
+    if (botonFavorito.classList.contains('active')) {
+        alert('Inmueble agregado a favoritos.');
+    } else {
+        alert('Inmueble eliminado de favoritos.');
+    }
+});
+
+
+
 //funcion para las estrellas
 estrellas.forEach((estrella, index) => {
     estrella.addEventListener('mouseover', () => {
