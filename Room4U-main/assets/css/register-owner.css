@@ -1,0 +1,51 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+}
+
+main h2 {}
+
+main .inputs-Container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .inputs-Container input {
+    background-color: rgb(188, 186, 221);
+    width: 500px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    padding: 20px;
+
+}
+
+main .inputs-Container input::placeholder {
+    color: black;
+}
+
+main button {
+    align-self: flex-end;
+    margin-top: 60px;
+    background-color: rgb(236, 189, 61);
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+}
+
+
+.error-message {
+    color: red; 
+    font-size: 14px; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border: 2px solid red; 
+    background-color: #ffe6e6; 
+    border-radius: 30px; 
+    display: none;
+}

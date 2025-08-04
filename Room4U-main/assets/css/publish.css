@@ -1,0 +1,127 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+main .publishContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+main .buttonTypePropertie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 189, 61);
+    width: 300px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+main .location-details {
+    background-color: rgb(191, 189, 225);
+    max-width: auto;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+main .location-details p {
+    margin-right: 10px;
+}
+
+main .location-details input {
+    width: 100px;
+    margin-right: 15px;
+}
+
+main .descriptionContainer {
+    background-color: rgb(191, 189, 225);
+    width: 600px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+main .descriptionContainer p {
+    margin-right: 10px;
+}
+
+main .descriptionContainer input {
+    height: 100%;
+    width: 450px;
+    text-align: center;
+}
+
+main select {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+main .image-upload-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main button {
+    background-color: rgb(235, 189, 61);
+    width: 300px;
+    text-align: center;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    align-self: flex-end;
+}
+
+
+.error-message {
+    color: red; 
+    font-size: 10px; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border: 2px solid red; 
+    background-color: #ffe6e6; 
+    border-radius: 30px; 
+    display: none;
+}
+
+#alertContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#alertContainer h3 {
+    text-align: center;
+}
+
+#alertContainer .buttonsAlertContainer button {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+}
+

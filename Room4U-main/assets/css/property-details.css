@@ -1,0 +1,228 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+main h3 {
+    margin-bottom: 15px;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta según sea necesario */
+    height: 400px;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imageContainer .prev, 
+.imageContainer .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+}
+
+.imageContainer .prev {
+    left: 10px;
+}
+
+.imageContainer .next {
+    right: 10px;
+}
+
+main .dataContainer {
+    margin-top: 10px;
+}
+
+main .dataContainer p {
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+main > button {
+    align-self: center;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-right: 70px;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.heart-icon {
+    width: 24px;
+    height: 24px;
+    color: grey;
+    transition: color 0.3s ease;
+}
+
+.favorite-btn[data-favorite="true"] .heart-icon {
+    color: red;
+}
+
+.favorite-btn[data-favorite="false"] .heart-icon {
+    color: black;
+}
+
+#favoriteButton {
+    position: absolute;
+    margin-top: 30px;
+    right: 0px;
+}
+
+#commentSection {
+    position: absolute;
+    margin-top: 100px;
+    margin-right: 20px;
+    right: 0px;
+    max-width: 200px;
+}
+
+#commentSection input {
+    width: 170px;
+    height: 30px;
+}
+
+#commentSection button {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+}
+
+#commentSection .commentTitle {
+    font-size: 18px;
+}
+#commentSection .commentName {
+    font-weight: bold;
+}
+
+
+#opencommentbutton {
+    background-color: rgb(237, 131, 128);
+    width: 100px;
+}
+
+#commentinput {
+    background-color: gray;
+    color: white;
+}
+
+
+#commentinput::placeholder {
+    color: white;
+}
+  
+#star-rating .star {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+#star-rating .star.selected {
+    color: gold;
+}
+
+.star::after, .rate::after {
+    content: attr(data-text); /* Toma el texto del atributo data-text */
+    position: absolute;
+    bottom: 30px; /* Ajusta la posición vertical del mensaje */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    visibility: hidden; /* Oculta el mensaje por defecto */
+    opacity: 0; /* Hace el mensaje transparente */
+    transition: opacity 0.1s ease; /* Suaviza la aparición */
+  }
+  
+  .star:hover::after, .rate:hover::after {
+    visibility: visible; /* Muestra el mensaje al hacer hover */
+    opacity: 1; /* Lo hace opaco */
+  }
+
+#rating-container {
+    display: flex;
+  }
+  
+  .rate {
+    font-size: 20px;
+    width: 20px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .rate::before {
+    content: '★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .rate.filled::before {
+    color: gold;
+  }
+  
+  .rate.partial::before {
+    color: gold;
+    background: linear-gradient(to right, gold 0%, gold 100%);
+    background-clip: text;
+  }
+  
+  .rate.empty::before {
+    color: gray;
+  }
+  
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .title h3{
+    margin: auto 0;
+    margin-right: 20px;
+  }
+
+  #rating-container {
+    margin-right: 10px;
+  }

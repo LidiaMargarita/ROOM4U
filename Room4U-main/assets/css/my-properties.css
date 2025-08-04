@@ -1,0 +1,31 @@
+main {
+    padding: 25px;
+}
+
+main .my-properties-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+main .my-properties-container .propertyelement {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    background-color: rgb(191, 189, 225);
+    margin: 25px;
+}
+
+main .my-properties-container .propertyelement img {
+    width: 220px;
+    height: 180px;
+}
+
+main .my-properties-container .propertyelement p {
+    margin-top: 5px;
+}
